@@ -1,0 +1,271 @@
+{
+  "feed": {
+    "title": "Top Audiobooks",
+    "id": "https:\/\/rss.itunes.apple.com\/api\/v1\/us\/audiobooks\/top-audiobooks\/all\/10\/explicit.json",
+    "author": {
+      "name": "iTunes Store",
+      "uri": "http:\/\/wwww.apple.com\/us\/itunes\/"
+    },
+    "links": [
+      {
+        "self": "https:\/\/rss.itunes.apple.com\/api\/v1\/us\/audiobooks\/top-audiobooks\/all\/10\/explicit.json"
+      },
+      {
+        "alternate": "https:\/\/itunes.apple.com\/WebObjects\/MZStore.woa\/wa\/viewTop?genreId=50000024&popId=8"
+      }
+    ],
+    "copyright": "Copyright \u00a9 2018 Apple Inc. All rights reserved.",
+    "country": "us",
+    "icon": "http:\/\/itunes.apple.com\/favicon.ico",
+    "updated": "2020-01-12T02:08:14.000-08:00",
+    "results": [
+      {
+        "artistName": "Malcolm Gladwell",
+        "id": "1479450310",
+        "releaseDate": "2019-09-10",
+        "name": "Talking to Strangers",
+        "kind": "book",
+        "artistId": "56993313",
+        "artistUrl": "https:\/\/books.apple.com\/us\/artist\/malcolm-gladwell\/56993313",
+        "artworkUrl100": "https:\/\/is1-ssl.mzstatic.com\/image\/thumb\/Music123\/v4\/87\/34\/3c\/87343ce1-ad7c-ca65-2e58-21441a45ec20\/9781549150340.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "50000052",
+            "name": "Nonfiction",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000052"
+          },
+          {
+            "genreId": "50000024",
+            "name": "Audiobooks",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000024"
+          }
+        ],
+        "url": "https:\/\/books.apple.com\/us\/audiobook\/talking-to-strangers\/id1479450310"
+      },
+      {
+        "artistName": "Jeffery Deaver",
+        "id": "1417637688",
+        "releaseDate": "2014-01-30",
+        "name": "The Bone Collector: The First Lincoln Rhyme Novel (Unabridged)",
+        "kind": "book",
+        "artistId": "1417637690",
+        "artistUrl": "https:\/\/books.apple.com\/us\/artist\/jeffery-deaver\/1417637690",
+        "artworkUrl100": "https:\/\/is2-ssl.mzstatic.com\/image\/thumb\/Music118\/v4\/a8\/ea\/e5\/a8eae533-1bc8-c851-0b30-7f631293746a\/9780698170292.d.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "50000051",
+            "name": "Mysteries & Thrillers",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000051"
+          },
+          {
+            "genreId": "50000024",
+            "name": "Audiobooks",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000024"
+          }
+        ],
+        "url": "https:\/\/books.apple.com\/us\/audiobook\/bone-collector-first-lincoln-rhyme-novel-unabridged\/id1417637688"
+      },
+      {
+        "artistName": "Mark Manson",
+        "id": "1441488889",
+        "releaseDate": "2016-09-13",
+        "name": "The Subtle Art of Not Giving a F*ck",
+        "kind": "book",
+        "artistId": "543049691",
+        "artistUrl": "https:\/\/books.apple.com\/us\/artist\/mark-manson\/543049691",
+        "artworkUrl100": "https:\/\/is5-ssl.mzstatic.com\/image\/thumb\/Music114\/v4\/52\/ea\/03\/52ea0399-bfa9-4b0a-5b9f-a3b8a2ce07a8\/9780062562982.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "50000056",
+            "name": "Self-Development",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000056"
+          },
+          {
+            "genreId": "50000024",
+            "name": "Audiobooks",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000024"
+          }
+        ],
+        "url": "https:\/\/books.apple.com\/us\/audiobook\/the-subtle-art-of-not-giving-a-f-ck\/id1441488889"
+      },
+      {
+        "artistName": "David Goggins",
+        "id": "1444948734",
+        "releaseDate": "2018-11-28",
+        "name": "Can't Hurt Me: Master Your Mind and Defy the Odds (Unabridged)",
+        "kind": "book",
+        "copyright": "\u2117 \u00a9 2018 Lioncrest Publishing",
+        "artistId": "1275360479",
+        "artistUrl": "https:\/\/books.apple.com\/us\/artist\/david-goggins\/1275360479",
+        "artworkUrl100": "https:\/\/is3-ssl.mzstatic.com\/image\/thumb\/Music124\/v4\/7c\/1d\/62\/7c1d62ad-1a6a-30da-fd60-9df97ac87df5\/rm_image.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "50000042",
+            "name": "Biographies & Memoirs",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000042"
+          },
+          {
+            "genreId": "50000024",
+            "name": "Audiobooks",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000024"
+          },
+          {
+            "genreId": "50000056",
+            "name": "Self-Development",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000056"
+          }
+        ],
+        "url": "https:\/\/books.apple.com\/us\/audiobook\/cant-hurt-me-master-your-mind-and-defy-the-odds-unabridged\/id1444948734"
+      },
+      {
+        "artistName": "Delia Owens",
+        "id": "1428290134",
+        "releaseDate": "2018-08-14",
+        "name": "Where the Crawdads Sing (Unabridged)",
+        "kind": "book",
+        "artistId": "427536076",
+        "artistUrl": "https:\/\/books.apple.com\/us\/artist\/delia-owens\/427536076",
+        "artworkUrl100": "https:\/\/is4-ssl.mzstatic.com\/image\/thumb\/Music113\/v4\/3b\/24\/8a\/3b248a3c-d56d-8040-e4e6-29daa95701b4\/9780525640370.d.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "50000040",
+            "name": "Fiction",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000040"
+          },
+          {
+            "genreId": "50000024",
+            "name": "Audiobooks",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000024"
+          }
+        ],
+        "url": "https:\/\/books.apple.com\/us\/audiobook\/where-the-crawdads-sing-unabridged\/id1428290134"
+      },
+      {
+        "artistName": "James Clear",
+        "id": "1436767025",
+        "releaseDate": "2018-10-16",
+        "name": "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones (Unabridged)",
+        "kind": "book",
+        "artistId": "1374709152",
+        "artistUrl": "https:\/\/books.apple.com\/us\/artist\/james-clear\/1374709152",
+        "artworkUrl100": "https:\/\/is2-ssl.mzstatic.com\/image\/thumb\/Music123\/v4\/c2\/33\/3e\/c2333e4e-05ee-492f-cc86-2fe15fa70a4f\/9781524779269.d.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "50000043",
+            "name": "Business & Personal Finance",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000043"
+          },
+          {
+            "genreId": "50000024",
+            "name": "Audiobooks",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000024"
+          },
+          {
+            "genreId": "50000052",
+            "name": "Nonfiction",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000052"
+          }
+        ],
+        "url": "https:\/\/books.apple.com\/us\/audiobook\/atomic-habits-easy-proven-way-to-build-good-habits\/id1436767025"
+      },
+      {
+        "artistName": "Jocko Willink & Leif Babin",
+        "id": "1440586110",
+        "releaseDate": "2015-10-20",
+        "name": "Extreme Ownership",
+        "kind": "book",
+        "artistId": "981048047",
+        "artistUrl": "https:\/\/books.apple.com\/WebObjects\/MZStore.woa\/wa\/viewCollaboration?cc=us&ids=981048047-981048050",
+        "artworkUrl100": "https:\/\/is3-ssl.mzstatic.com\/image\/thumb\/Music128\/v4\/72\/a7\/ae\/72a7ae7f-6a6e-0b6a-f8d9-bb510c460b6d\/9781427264305.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "50000043",
+            "name": "Business & Personal Finance",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000043"
+          },
+          {
+            "genreId": "50000024",
+            "name": "Audiobooks",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000024"
+          }
+        ],
+        "url": "https:\/\/books.apple.com\/us\/audiobook\/extreme-ownership\/id1440586110"
+      },
+      {
+        "artistName": "Danielle Steel",
+        "id": "1490933712",
+        "releaseDate": "2020-01-07",
+        "name": "Moral Compass",
+        "kind": "book",
+        "copyright": "\u2117 \u00a9 2020 Recorded Books",
+        "artistId": "2025376",
+        "artistUrl": "https:\/\/books.apple.com\/us\/artist\/danielle-steel\/2025376",
+        "artworkUrl100": "https:\/\/is3-ssl.mzstatic.com\/image\/thumb\/Music113\/v4\/c6\/76\/a0\/c676a050-8232-ca9a-8e9e-671dd0d2fa34\/9781980057802_cover.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "50000040",
+            "name": "Fiction",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000040"
+          },
+          {
+            "genreId": "50000024",
+            "name": "Audiobooks",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000024"
+          }
+        ],
+        "url": "https:\/\/books.apple.com\/us\/audiobook\/moral-compass\/id1490933712"
+      },
+      {
+        "artistName": "Brad Taylor",
+        "id": "1481647823",
+        "releaseDate": "2020-01-07",
+        "name": "Hunter Killer",
+        "kind": "book",
+        "artistId": "398280488",
+        "artistUrl": "https:\/\/books.apple.com\/us\/artist\/brad-taylor\/398280488",
+        "artworkUrl100": "https:\/\/is5-ssl.mzstatic.com\/image\/thumb\/Music113\/v4\/0c\/9a\/8f\/0c9a8f2b-c642-065c-9044-9049c2fd8ae3\/9780062886057.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "50000040",
+            "name": "Fiction",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000040"
+          },
+          {
+            "genreId": "50000024",
+            "name": "Audiobooks",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000024"
+          }
+        ],
+        "url": "https:\/\/books.apple.com\/us\/audiobook\/hunter-killer\/id1481647823"
+      },
+      {
+        "artistName": "John Berendt",
+        "id": "1416877215",
+        "releaseDate": "2005-11-22",
+        "name": "Midnight in the Garden of Good and Evil (Unabridged)",
+        "kind": "book",
+        "artistId": "81487887",
+        "artistUrl": "https:\/\/books.apple.com\/us\/artist\/john-berendt\/81487887",
+        "artworkUrl100": "https:\/\/is4-ssl.mzstatic.com\/image\/thumb\/Music128\/v4\/23\/7b\/e8\/237be824-6cc3-a2b8-8728-11eb937e1476\/9780739334546.d.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "50000052",
+            "name": "Nonfiction",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000052"
+          },
+          {
+            "genreId": "50000024",
+            "name": "Audiobooks",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000024"
+          },
+          {
+            "genreId": "50000049",
+            "name": "History",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id50000049"
+          }
+        ],
+        "url": "https:\/\/books.apple.com\/us\/audiobook\/midnight-in-the-garden-of-good-and-evil-unabridged\/id1416877215"
+      }
+    ]
+  }
+}

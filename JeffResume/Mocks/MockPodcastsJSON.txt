@@ -1,0 +1,328 @@
+{
+  "feed": {
+    "title": "Top Audio Podcasts",
+    "id": "https:\/\/rss.itunes.apple.com\/api\/v1\/us\/podcasts\/top-podcasts\/all\/10\/explicit.json",
+    "author": {
+      "name": "iTunes Store",
+      "uri": "http:\/\/wwww.apple.com\/us\/itunes\/"
+    },
+    "links": [
+      {
+        "self": "https:\/\/rss.itunes.apple.com\/api\/v1\/us\/podcasts\/top-podcasts\/all\/10\/explicit.json"
+      },
+      {
+        "alternate": "https:\/\/itunes.apple.com\/WebObjects\/MZStore.woa\/wa\/viewTop?genreId=26&popId=28"
+      }
+    ],
+    "copyright": "Copyright \u00a9 2018 Apple Inc. All rights reserved.",
+    "country": "us",
+    "icon": "http:\/\/itunes.apple.com\/favicon.ico",
+    "updated": "2019-06-12T01:57:09.000-07:00",
+    "results": [
+      {
+        "artistName": "L.A. Times | Wondery",
+        "id": "1465334342",
+        "releaseDate": "2019-11-19",
+        "name": "Man In The Window: The Golden State Killer",
+        "kind": "podcast",
+        "copyright": "\u00a9 Wondery, Inc 2019",
+        "artistId": "1134742667",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https:\/\/podcasts.apple.com\/us\/artist\/l-a-times-wondery\/1134742667",
+        "artworkUrl100": "https:\/\/is1-ssl.mzstatic.com\/image\/thumb\/Podcasts113\/v4\/eb\/35\/fb\/eb35fbee-9f3f-37d1-41d3-3a26b118898a\/mza_5332618522750963362.jpeg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "1488",
+            "name": "True Crime",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1488"
+          },
+          {
+            "genreId": "26",
+            "name": "Podcasts",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id26"
+          },
+          {
+            "genreId": "1324",
+            "name": "Society & Culture",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1324"
+          }
+        ],
+        "url": "https:\/\/podcasts.apple.com\/us\/podcast\/man-in-the-window-the-golden-state-killer\/id1465334342"
+      },
+      {
+        "artistName": "Wondery | Bloomberg",
+        "id": "1459899275",
+        "releaseDate": "2019-11-19",
+        "name": "The Shrink Next Door",
+        "kind": "podcast",
+        "copyright": "\u00a9 Wondery, Inc. 2019",
+        "artistId": "1134742667",
+        "artistUrl": "https:\/\/podcasts.apple.com\/us\/artist\/wondery-bloomberg\/1134742667",
+        "artworkUrl100": "https:\/\/is1-ssl.mzstatic.com\/image\/thumb\/Podcasts113\/v4\/13\/70\/06\/13700678-fdda-818d-ae4a-b98768d0ff9a\/mza_797637912229019192.jpeg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "1543",
+            "name": "Documentary",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1543"
+          },
+          {
+            "genreId": "26",
+            "name": "Podcasts",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id26"
+          },
+          {
+            "genreId": "1324",
+            "name": "Society & Culture",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1324"
+          },
+          {
+            "genreId": "1302",
+            "name": "Personal Journals",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1302"
+          }
+        ],
+        "url": "https:\/\/podcasts.apple.com\/us\/podcast\/the-shrink-next-door\/id1459899275"
+      },
+      {
+        "artistName": "audiochuck",
+        "id": "1322200189",
+        "releaseDate": "2019-12-09",
+        "name": "Crime Junkie",
+        "kind": "podcast",
+        "copyright": "\u00a9 audiochuck",
+        "artistId": "1485045052",
+        "artistUrl": "https:\/\/podcasts.apple.com\/us\/artist\/audiochuck\/1485045052",
+        "artworkUrl100": "https:\/\/is5-ssl.mzstatic.com\/image\/thumb\/Podcasts113\/v4\/c7\/dc\/3a\/c7dc3a8b-0059-09f6-b707-5a927494dd0e\/mza_15450212981800651587.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "1488",
+            "name": "True Crime",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1488"
+          },
+          {
+            "genreId": "26",
+            "name": "Podcasts",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id26"
+          }
+        ],
+        "url": "https:\/\/podcasts.apple.com\/us\/podcast\/crime-junkie\/id1322200189"
+      },
+      {
+        "artistName": "Joe Rogan",
+        "id": "360084272",
+        "releaseDate": "2019-12-07",
+        "name": "The Joe Rogan Experience",
+        "kind": "podcast",
+        "copyright": "Copyright \u00a9 Talking Monkey Productions",
+        "artistId": "974891224",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https:\/\/podcasts.apple.com\/us\/artist\/joe-rogan\/974891224",
+        "artworkUrl100": "https:\/\/is4-ssl.mzstatic.com\/image\/thumb\/Podcasts123\/v4\/12\/ab\/d6\/12abd655-2473-c4fb-7d53-33e1b9e4afdc\/mza_6788052308516976968.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "1303",
+            "name": "Comedy",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1303"
+          },
+          {
+            "genreId": "26",
+            "name": "Podcasts",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id26"
+          },
+          {
+            "genreId": "1324",
+            "name": "Society & Culture",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1324"
+          }
+        ],
+        "url": "https:\/\/podcasts.apple.com\/us\/podcast\/the-joe-rogan-experience\/id360084272"
+      },
+      {
+        "artistName": "Crooked Media",
+        "id": "1464954218",
+        "releaseDate": "2019-07-22",
+        "name": "This Land",
+        "kind": "podcast",
+        "copyright": "\u00a9 Crooked Media. All Rights Reserved.",
+        "artistId": "1200975667",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https:\/\/podcasts.apple.com\/us\/artist\/crooked-media\/1200975667",
+        "artworkUrl100": "https:\/\/is2-ssl.mzstatic.com\/image\/thumb\/Podcasts113\/v4\/2d\/55\/6f\/2d556fc9-dd52-9ea0-b63b-84f6017b82d8\/mza_3031701679532552955.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "1543",
+            "name": "Documentary",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1543"
+          },
+          {
+            "genreId": "26",
+            "name": "Podcasts",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id26"
+          },
+          {
+            "genreId": "1324",
+            "name": "Society & Culture",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1324"
+          }
+        ],
+        "url": "https:\/\/podcasts.apple.com\/us\/podcast\/this-land\/id1464954218"
+      },
+      {
+        "artistName": "HBO",
+        "id": "1459712981",
+        "releaseDate": "2019-11-04",
+        "name": "The Chernobyl Podcast",
+        "kind": "podcast",
+        "copyright": "\u00a9 2019 Home Box Office, Inc. All Rights Reserved. This site may contain mature content.",
+        "artworkUrl100": "https:\/\/is5-ssl.mzstatic.com\/image\/thumb\/Podcasts113\/v4\/63\/aa\/94\/63aa94c9-f2c5-d1f5-1c95-71bf02ddf2c9\/mza_6309776810210390724.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "1309",
+            "name": "TV & Film",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1309"
+          },
+          {
+            "genreId": "26",
+            "name": "Podcasts",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id26"
+          },
+          {
+            "genreId": "1487",
+            "name": "History",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1487"
+          }
+        ],
+        "url": "https:\/\/podcasts.apple.com\/us\/podcast\/the-chernobyl-podcast\/id1459712981"
+      },
+      {
+        "artistName": "The New York Times",
+        "id": "1200361736",
+        "releaseDate": "2019-12-09",
+        "name": "The Daily",
+        "kind": "podcast",
+        "copyright": "\u00a9 2018-2019 THE NEW YORK TIMES COMPANY; The New York Times encourages the use of RSS feeds for personal use in a news reader or as part of a non-commercial blog, subject to your agreement to our Terms of Service. Any commercial use of the RSS feed, and thus our content accessible via it, is prohibited without a written specific permission from The New York Times . We require proper format and attribution whenever New York Times content is posted on other's properties, and we reserve the right to require that you cease distributing our content.",
+        "artistId": "121664449",
+        "artistUrl": "https:\/\/podcasts.apple.com\/us\/artist\/the-new-york-times\/121664449",
+        "artworkUrl100": "https:\/\/is5-ssl.mzstatic.com\/image\/thumb\/Podcasts113\/v4\/57\/9e\/80\/579e802f-63e7-e5b8-1e2f-8bcb4a1968f7\/mza_4646561600001809308.jpeg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "1526",
+            "name": "Daily News",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1526"
+          },
+          {
+            "genreId": "26",
+            "name": "Podcasts",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id26"
+          },
+          {
+            "genreId": "1489",
+            "name": "News",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1489"
+          }
+        ],
+        "url": "https:\/\/podcasts.apple.com\/us\/podcast\/the-daily\/id1200361736"
+      },
+      {
+        "artistName": "iHeartRadio",
+        "id": "1462096941",
+        "releaseDate": "2019-12-04",
+        "name": "Chelsea Handler: Life Will Be the Death of Me",
+        "kind": "podcast",
+        "copyright": "\u00a9 iHeartRadio",
+        "artistId": "284341002",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https:\/\/podcasts.apple.com\/us\/artist\/iheartradio\/284341002",
+        "artworkUrl100": "https:\/\/is3-ssl.mzstatic.com\/image\/thumb\/Podcasts123\/v4\/66\/ff\/fe\/66fffe76-aa66-bf66-8029-9b5ab2a27183\/mza_793393231337696469.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "1496",
+            "name": "Comedy Interviews",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1496"
+          },
+          {
+            "genreId": "26",
+            "name": "Podcasts",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id26"
+          },
+          {
+            "genreId": "1303",
+            "name": "Comedy",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1303"
+          },
+          {
+            "genreId": "1324",
+            "name": "Society & Culture",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1324"
+          }
+        ],
+        "url": "https:\/\/podcasts.apple.com\/us\/podcast\/chelsea-handler-life-will-be-the-death-of-me\/id1462096941"
+      },
+      {
+        "artistName": "Tenderfoot TV & Cadence 13",
+        "id": "1453788965",
+        "releaseDate": "2019-11-05",
+        "name": "To Live and Die in LA",
+        "kind": "podcast",
+        "copyright": "\u00a9 2019 Tenderfoot TV. All Rights Reserved.",
+        "artistId": "1249924853",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https:\/\/podcasts.apple.com\/us\/artist\/tenderfoot-tv-cadence-13\/1249924853",
+        "artworkUrl100": "https:\/\/is1-ssl.mzstatic.com\/image\/thumb\/Podcasts123\/v4\/24\/1e\/97\/241e9701-f40e-8c4d-a783-9b7b77508f6d\/mza_1803616348270839033.jpg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "1488",
+            "name": "True Crime",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1488"
+          },
+          {
+            "genreId": "26",
+            "name": "Podcasts",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id26"
+          },
+          {
+            "genreId": "1324",
+            "name": "Society & Culture",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1324"
+          },
+          {
+            "genreId": "1302",
+            "name": "Personal Journals",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1302"
+          }
+        ],
+        "url": "https:\/\/podcasts.apple.com\/us\/podcast\/to-live-and-die-in-la\/id1453788965"
+      },
+      {
+        "artistName": "Exactly Right",
+        "id": "1074507850",
+        "releaseDate": "2019-12-09",
+        "name": "My Favorite Murder with Karen Kilgariff and Georgia Hardstark",
+        "kind": "podcast",
+        "copyright": "\u00a9 Exactly Right Media, Inc.",
+        "artistId": "1445321651",
+        "contentAdvisoryRating": "Explicit",
+        "artistUrl": "https:\/\/podcasts.apple.com\/us\/artist\/exactly-right\/1445321651",
+        "artworkUrl100": "https:\/\/is1-ssl.mzstatic.com\/image\/thumb\/Podcasts113\/v4\/b0\/4e\/c9\/b04ec9e2-ef17-2ccb-cf43-6bc9801fff39\/mza_5848226369463695152.jpeg\/200x200bb.png",
+        "genres": [
+          {
+            "genreId": "1488",
+            "name": "True Crime",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1488"
+          },
+          {
+            "genreId": "26",
+            "name": "Podcasts",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id26"
+          },
+          {
+            "genreId": "1303",
+            "name": "Comedy",
+            "url": "https:\/\/itunes.apple.com\/us\/genre\/id1303"
+          }
+        ],
+        "url": "https:\/\/podcasts.apple.com\/us\/podcast\/my-favorite-murder-karen-kilgariff-georgia-hardstark\/id1074507850"
+      }
+    ]
+  }
+}
