@@ -127,7 +127,7 @@ class BaseSlidingVC: UIViewController {
         case 1:
             performRightViewCleanUp()
             let vm = NestedViewModel(mediaTypes: [.movies, .podcasts, .audiobooks])
-            let homeController = NestedViewController(viewModel: vm)
+            let homeController = NestedViewTabController(viewModel: vm)
             centerViewController = UINavigationController(rootViewController: homeController)
         case 2:
             performRightViewCleanUp()

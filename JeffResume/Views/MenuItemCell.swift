@@ -16,6 +16,33 @@ class IconImageView: UIImageView {
 
 class MenuItemCell: UITableViewCell {
     
+    //MARK:- LIFE CYCLE
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .black
+        titleLabel.text = "profile"
+        setupStackView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK:- PRIVATE METHOD
+    private func setupStackView() {
+        let stackView = UIStackView(arrangedSubviews: [titleLabel])
+        addSubview(stackView)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.spacing = 12
+        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins = .init(top: 8, left: 12, bottom: 8, right: 12)
+    }
+    
+    //MARK:- UI ELEMENTS
     let iconImageView: IconImageView = {
         let iv = IconImageView()
         iv.contentMode = .scaleAspectFit
@@ -29,28 +56,4 @@ class MenuItemCell: UITableViewCell {
         label.textColor = .white
         return label
     }()
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundColor = .black
-        let stackView = UIStackView(arrangedSubviews: [titleLabel])
-        addSubview(stackView)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.spacing = 12
-        let localizedString = NSLocalizedString("profile", comment: "Profile")
-        titleLabel.text = localizedString
-        
-        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        
-        stackView.isLayoutMarginsRelativeArrangement = true
-        stackView.layoutMargins = .init(top: 8, left: 12, bottom: 8, right: 12)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
 }

@@ -9,7 +9,8 @@
 import UIKit
 
 class NestedTableCellViewModel: NSObject {
-    let mediaType: MediaType
+    
+    //MARK:- PROPERTIES
     private let networkService: MediaProtocol
     private var cellHeight: CGFloat = 100
     private var mediaObjects = [MediaObject]() {
@@ -18,8 +19,10 @@ class NestedTableCellViewModel: NSObject {
         }
     }
     static let cellID = "collectionCellID"
+    let mediaType: MediaType
     var bindableMediaObjects = Bindable<String>()
     
+    //MARK:- LIFE CYCLE
     init(mediaType: MediaType, urlString: String, networkService: MediaProtocol = NetworkService()) {
         self.networkService = networkService
         self.mediaType = mediaType
@@ -34,12 +37,7 @@ class NestedTableCellViewModel: NSObject {
         }
     }
     
-    func loadMedia(urlString: String, completion: @escaping (Result<[MediaObject], MediaLoadingError>) -> ()) {
-        networkService.loadMedia(urlString: urlString) { (result) in
-            completion(result)
-        }
-    }
-    
+    //MARK:- METHODS
     private func createCollectionMediaViewModel(index: Int) -> CollectionMediaCellViewModel {
         let mediaObject = mediaObjects[index]
         return CollectionMediaCellViewModel(mediaObject: mediaObject)
@@ -48,8 +46,15 @@ class NestedTableCellViewModel: NSObject {
     private func titleText() -> String {
         return mediaType.rawValue
     }
+    
+    func loadMedia(urlString: String, completion: @escaping (Result<[MediaObject], MediaLoadingError>) -> ()) {
+        networkService.loadMedia(urlString: urlString) { (result) in
+            completion(result)
+        }
+    }
 }
 
+//MARK:- COLLECTIONVIEW DELEGATE, DATASOURCE, AND DELEGATEFLOWLAYOUT
 extension NestedTableCellViewModel: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return mediaObjects.count

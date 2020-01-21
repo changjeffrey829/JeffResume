@@ -9,11 +9,14 @@
 import UIKit
 
 class MediaTypeSettingCellViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    //MARK:- PROPERTIES
     let mediaType: MediaType
     let mediaSetting: MediaSetting
     let ituneURLComponents: [String]
     let currentIndex: Int
     
+    //MARK:- LIFE CYCLE
     init(mediaType: MediaType, mediaSetting: MediaSetting, ituneURLComponents: [String], currentIndex: Int) {
         self.mediaType = mediaType
         self.mediaSetting = mediaSetting
@@ -21,6 +24,7 @@ class MediaTypeSettingCellViewModel: NSObject, UIPickerViewDelegate, UIPickerVie
         self.currentIndex = currentIndex
     }
     
+    //MARK:- PICKERVIEW DELEGATE AND DATASOURCE
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

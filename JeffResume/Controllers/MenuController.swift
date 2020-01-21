@@ -9,8 +9,11 @@
 import UIKit
 
 class MenuController: UITableViewController {
+    
+    //MARK:- PROPERTY
     let viewModel: MenuViewModel
     
+    //MARK:- LIFE CYCLE
     init(viewModel: MenuViewModel) {
         self.viewModel = viewModel
         super.init(style: .grouped)

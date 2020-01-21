@@ -9,15 +9,18 @@
 import UIKit
 
 class MenuViewModel: NSObject, UITableViewDelegate, UITableViewDataSource {
-    let menuCellID = "menuCellID"
-    let headerHeight: CGFloat = 200
-    let menuItems = [
+    
+    //MARK:- PROPERTIES
+    private let menuCellID = "menuCellID"
+    private let headerHeight: CGFloat = 200
+    private let menuItems = [
         "Why you should hire me",
         "Nested Controller",
         "Login",
         "Third Party Framework"
     ]
     
+    //MARK:- TABLEVIEW DELEGATE AND DATASOURCE
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let customHeaderView = CustomMenuHeaderView()
         return customHeaderView

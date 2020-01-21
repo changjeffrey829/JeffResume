@@ -9,6 +9,8 @@
 import UIKit
 
 class NestedTableViewCell: UITableViewCell {
+    
+    //MARK:- PROPERTIES
     var viewModel: NestedTableCellViewModel? {
         didSet {
             viewModel?.bindableMediaObjects.bind(observer: { (titleString) in
@@ -23,6 +25,7 @@ class NestedTableViewCell: UITableViewCell {
         }
     }
     
+    //MARK:- LIFE CYCLE
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .black
@@ -40,6 +43,7 @@ class NestedTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK:- OBJC PRIVATE METHOD
     @objc private func filterButtonTapped() {
         let filterButtonName = NotificationUserInfoType.filterButton.rawValue
         let mediaType = viewModel?.mediaType ?? MediaType.movies
@@ -47,6 +51,7 @@ class NestedTableViewCell: UITableViewCell {
         NotificationCenter.default.post(name: .filterButtonTapped, object: nil, userInfo: userInfo)
     }
     
+    //MARK:- UI ELEMENTS
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Loading..."

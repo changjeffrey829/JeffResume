@@ -13,20 +13,20 @@ var imageCache = [String : UIImage]()
 
 class CollectionMediaCellViewModel {
     
+    //MARK:- PROPERTIES
+    static let nameHeight: CGFloat = 20
+    static let padding: CGFloat = 4
     private var lastUrlUsedToLoadImage: String?
-    
     private var networkService: MediaProtocol
-    
     private var mediaObject: MediaObject
-    
-    var bindableImage = Bindable<UIImage>()
-    
     private var mediaImage: UIImage? {
         didSet {
             bindableImage.value = mediaImage
         }
     }
+    var bindableImage = Bindable<UIImage>()
     
+    //MARK:- LIFE CYCLE
     init(mediaObject: MediaObject, networkService: MediaProtocol = NetworkService()) {
         self.networkService = networkService
         self.mediaObject = mediaObject
@@ -40,6 +40,7 @@ class CollectionMediaCellViewModel {
         }
     }
     
+    //MARK:- METHODS
     func getMediaName() -> NSAttributedString {
         return AStringCreator.HelveticaAString(style: .HelveticaNeue, text: mediaObject.name, size: 16, foregroundColor: .black, backgroundColor: .clear)
     }

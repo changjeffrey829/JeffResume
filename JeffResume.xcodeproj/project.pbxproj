@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0409144323C920440089EE66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409144223C920440089EE66 /* AppDelegate.swift */; };
 		0409144523C920440089EE66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409144423C920440089EE66 /* SceneDelegate.swift */; };
-		0409144723C920440089EE66 /* NestedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409144623C920440089EE66 /* NestedViewController.swift */; };
+		0409144723C920440089EE66 /* NestedViewTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409144623C920440089EE66 /* NestedViewTabController.swift */; };
 		0409144C23C920480089EE66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0409144B23C920480089EE66 /* Assets.xcassets */; };
 		0409144F23C920480089EE66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0409144D23C920480089EE66 /* LaunchScreen.storyboard */; };
 		0409145723C924BE0089EE66 /* BaseSlidingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409145623C924BE0089EE66 /* BaseSlidingVC.swift */; };
@@ -46,6 +46,11 @@
 		0440249623D18ECF003865B5 /* MediaTypeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440249523D18ECF003865B5 /* MediaTypeSettingTableViewCell.swift */; };
 		0440249823D18F06003865B5 /* MediaTypeSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440249723D18F06003865B5 /* MediaTypeSettingViewModel.swift */; };
 		0440249A23D57792003865B5 /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440249923D57792003865B5 /* ComingSoonViewController.swift */; };
+		0440249C23D6C65A003865B5 /* NestedViewTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440249B23D6C65A003865B5 /* NestedViewTabView.swift */; };
+		0440249E23D6C849003865B5 /* ComingSoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440249D23D6C849003865B5 /* ComingSoonView.swift */; };
+		044024A023D6CC04003865B5 /* MediaSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440249F23D6CC04003865B5 /* MediaSettingView.swift */; };
+		044024A223D6CD5E003865B5 /* MediaSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044024A123D6CD5E003865B5 /* MediaSetting.swift */; };
+		044024A423D6CFE1003865B5 /* ItuneURLWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044024A323D6CFE1003865B5 /* ItuneURLWrapper.swift */; };
 		0CEAB6DDB320B649E746DD28 /* Pods_JeffResume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EE514476A1B83C56E9D0F8 /* Pods_JeffResume.framework */; };
 		EE810F0424DCC2A9B42F3B2A /* Pods_JeffResumeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D32717CF4610150E2BB8794 /* Pods_JeffResumeTests.framework */; };
 /* End PBXBuildFile section */
@@ -66,7 +71,7 @@
 		0409143F23C920440089EE66 /* JeffResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeffResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0409144223C920440089EE66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0409144423C920440089EE66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0409144623C920440089EE66 /* NestedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedViewController.swift; sourceTree = "<group>"; };
+		0409144623C920440089EE66 /* NestedViewTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedViewTabController.swift; sourceTree = "<group>"; };
 		0409144B23C920480089EE66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0409144E23C920480089EE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0409145023C920490089EE66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +111,11 @@
 		0440249523D18ECF003865B5 /* MediaTypeSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeSettingTableViewCell.swift; sourceTree = "<group>"; };
 		0440249723D18F06003865B5 /* MediaTypeSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTypeSettingViewModel.swift; sourceTree = "<group>"; };
 		0440249923D57792003865B5 /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
+		0440249B23D6C65A003865B5 /* NestedViewTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedViewTabView.swift; sourceTree = "<group>"; };
+		0440249D23D6C849003865B5 /* ComingSoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonView.swift; sourceTree = "<group>"; };
+		0440249F23D6CC04003865B5 /* MediaSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSettingView.swift; sourceTree = "<group>"; };
+		044024A123D6CD5E003865B5 /* MediaSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSetting.swift; sourceTree = "<group>"; };
+		044024A323D6CFE1003865B5 /* ItuneURLWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItuneURLWrapper.swift; sourceTree = "<group>"; };
 		2FA6DDEEB8BA745686FD1B64 /* Pods-JeffResumeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JeffResumeTests.debug.xcconfig"; path = "Target Support Files/Pods-JeffResumeTests/Pods-JeffResumeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		78B0B075D86D5B5755945D1F /* Pods-JeffResume.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JeffResume.release.xcconfig"; path = "Target Support Files/Pods-JeffResume/Pods-JeffResume.release.xcconfig"; sourceTree = "<group>"; };
 		9D32717CF4610150E2BB8794 /* Pods_JeffResumeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JeffResumeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,11 +185,14 @@
 			isa = PBXGroup;
 			children = (
 				0440248723CEB036003865B5 /* CollectionMediaCell.swift */,
+				0440249D23D6C849003865B5 /* ComingSoonView.swift */,
 				0409145A23C929A70089EE66 /* CustomMenuHeaderView.swift */,
+				0440249F23D6CC04003865B5 /* MediaSettingView.swift */,
+				0440249523D18ECF003865B5 /* MediaTypeSettingTableViewCell.swift */,
 				0409145C23C929EA0089EE66 /* MenuItemCell.swift */,
 				0440247F23CE7144003865B5 /* NestedTableViewCell.swift */,
+				0440249B23D6C65A003865B5 /* NestedViewTabView.swift */,
 				0409146023C92A8F0089EE66 /* ProfileImageView.swift */,
-				0440249523D18ECF003865B5 /* MediaTypeSettingTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,7 +225,7 @@
 			children = (
 				0409145623C924BE0089EE66 /* BaseSlidingVC.swift */,
 				0409145823C929850089EE66 /* MenuController.swift */,
-				0409144623C920440089EE66 /* NestedViewController.swift */,
+				0409144623C920440089EE66 /* NestedViewTabController.swift */,
 				0440249923D57792003865B5 /* ComingSoonViewController.swift */,
 				0440248D23CFB982003865B5 /* MediaSettingViewController.swift */,
 			);
@@ -239,15 +252,17 @@
 		0409148123CA6CC20089EE66 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0409148423CA6D390089EE66 /* MediaObject.swift */,
-				0409148223CA6CE60089EE66 /* MediaType.swift */,
 				0440248123CE88F5003865B5 /* Bindable.swift */,
-				0440248F23D12621003865B5 /* Genre.swift */,
-				040914AC23CC4DB90089EE66 /* URLStringCreator.swift */,
-				0409147F23CA6CB20089EE66 /* NetworkService.swift */,
-				0409148623CA6D6F0089EE66 /* RawDataResponse.swift */,
-				0440248923CFB043003865B5 /* NotificationUserInfoType.swift */,
 				0440249123D12643003865B5 /* FeedType.swift */,
+				0440248F23D12621003865B5 /* Genre.swift */,
+				044024A323D6CFE1003865B5 /* ItuneURLWrapper.swift */,
+				0409148423CA6D390089EE66 /* MediaObject.swift */,
+				044024A123D6CD5E003865B5 /* MediaSetting.swift */,
+				0409148223CA6CE60089EE66 /* MediaType.swift */,
+				0409147F23CA6CB20089EE66 /* NetworkService.swift */,
+				0440248923CFB043003865B5 /* NotificationUserInfoType.swift */,
+				0409148623CA6D6F0089EE66 /* RawDataResponse.swift */,
+				040914AC23CC4DB90089EE66 /* URLStringCreator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -471,6 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044024A223D6CD5E003865B5 /* MediaSetting.swift in Sources */,
 				0440249223D12643003865B5 /* FeedType.swift in Sources */,
 				0409145F23C92A6C0089EE66 /* AStringCreator.swift in Sources */,
 				0409148523CA6D390089EE66 /* MediaObject.swift in Sources */,
@@ -483,16 +499,18 @@
 				0440249623D18ECF003865B5 /* MediaTypeSettingTableViewCell.swift in Sources */,
 				0409148723CA6D6F0089EE66 /* RawDataResponse.swift in Sources */,
 				0440248E23CFB982003865B5 /* MediaSettingViewController.swift in Sources */,
+				044024A423D6CFE1003865B5 /* ItuneURLWrapper.swift in Sources */,
 				0409145B23C929A70089EE66 /* CustomMenuHeaderView.swift in Sources */,
 				0409145723C924BE0089EE66 /* BaseSlidingVC.swift in Sources */,
 				0440249A23D57792003865B5 /* ComingSoonViewController.swift in Sources */,
-				0409144723C920440089EE66 /* NestedViewController.swift in Sources */,
+				0409144723C920440089EE66 /* NestedViewTabController.swift in Sources */,
 				0440247C23CE70D7003865B5 /* NestedTableCellViewModel.swift in Sources */,
 				0409145D23C929EA0089EE66 /* MenuItemCell.swift in Sources */,
 				0440248423CE9B75003865B5 /* MenuViewModel.swift in Sources */,
 				0409148323CA6CE60089EE66 /* MediaType.swift in Sources */,
 				0409147E23CA6CA20089EE66 /* MockSession.swift in Sources */,
 				0440248823CEB036003865B5 /* CollectionMediaCell.swift in Sources */,
+				0440249C23D6C65A003865B5 /* NestedViewTabView.swift in Sources */,
 				0409146123C92A8F0089EE66 /* ProfileImageView.swift in Sources */,
 				0440247A23CE70B6003865B5 /* NestedViewModel.swift in Sources */,
 				040914AD23CC4DB90089EE66 /* URLStringCreator.swift in Sources */,
@@ -501,8 +519,10 @@
 				0409144323C920440089EE66 /* AppDelegate.swift in Sources */,
 				0440248623CEA264003865B5 /* CollectionMediaCellViewModel.swift in Sources */,
 				0409146323C92AA10089EE66 /* AnchorExtension.swift in Sources */,
+				0440249E23D6C849003865B5 /* ComingSoonView.swift in Sources */,
 				0409148023CA6CB20089EE66 /* NetworkService.swift in Sources */,
 				0409144523C920440089EE66 /* SceneDelegate.swift in Sources */,
+				044024A023D6CC04003865B5 /* MediaSettingView.swift in Sources */,
 				0440249023D12621003865B5 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

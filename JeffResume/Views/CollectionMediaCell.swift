@@ -10,9 +10,9 @@ import UIKit
 
 class CollectionMediaCell: UICollectionViewCell {
     
-    let nameHeight: CGFloat = 20
-    let padding: CGFloat = 4
-    
+    //MARK:- PROPERTIES
+    let nameHeight = CollectionMediaCellViewModel.nameHeight
+    let padding = CollectionMediaCellViewModel.padding
     var viewModel: CollectionMediaCellViewModel? {
         didSet {
             nameLabel.attributedText = viewModel?.getMediaName()
@@ -24,6 +24,7 @@ class CollectionMediaCell: UICollectionViewCell {
         }
     }
     
+    //MARK:- LIFE CYCLE
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -44,6 +45,7 @@ class CollectionMediaCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK:- UI ELEMENTS
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Name"
