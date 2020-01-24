@@ -11,7 +11,7 @@ import UIKit
 class MenuController: UITableViewController {
     
     //MARK:- PROPERTY
-    let viewModel: MenuViewModel
+    private let viewModel: MenuViewModel
     
     //MARK:- LIFE CYCLE
     init(viewModel: MenuViewModel) {

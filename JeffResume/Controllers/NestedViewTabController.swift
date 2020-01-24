@@ -44,7 +44,7 @@ class NestedViewTabController: UIViewController {
     
     //MARK:- OBJC METHODS
     @objc private func openSlideMenu() {
-        let vc = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController as? BaseSlidingVC
+        let vc = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController as? BaseSlidingController
         vc?.openMenu()
     }
     
@@ -55,7 +55,7 @@ class NestedViewTabController: UIViewController {
         else {return}
         
         let vm = MediaTypeSettingViewModel(mediaType: mediaType, mediaSettingDatasource: [.country, .feedType, .genre, .resultLimit, .allowExplicit], ituneURLWrapper: ituneURLWrapper)
-        let vc = MediaSettingViewController(viewModel: vm)
+        let vc = MediaSettingController(viewModel: vm)
         vc.delegate = viewModel
         navigationController?.pushViewController(vc, animated: true)
     }

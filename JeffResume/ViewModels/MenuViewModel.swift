@@ -45,7 +45,7 @@ class MenuViewModel: NSObject, UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         
         if indexPath.row == 16 {return}
-        let slidingController = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController as? BaseSlidingVC
+        let slidingController = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController as? BaseSlidingController
         slidingController?.didSelectMenuItem(index: indexPath.row)
     }
 }

@@ -12,7 +12,7 @@ protocol MediaSettingVCDelegate {
     func ituneURLWrapperUpdated(wrapper: ItuneURLWrapper)
 }
 
-class MediaSettingViewController: UIViewController {
+class MediaSettingController: UIViewController {
     
     //MARK:- PROPERTIES
     let viewModel: MediaTypeSettingViewModel

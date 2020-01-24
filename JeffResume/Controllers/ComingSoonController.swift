@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ComingSoonViewController: UIViewController {
+class ComingSoonController: UIViewController {
     
     //MARK:- PROPERTY
     let mainView = ComingSoonView()
@@ -33,7 +33,7 @@ class ComingSoonViewController: UIViewController {
     
     //MARK:- OBJC PRIVATE METHOD
     @objc private func openSlideMenu() {
-        let vc = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController as? BaseSlidingVC
+        let vc = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController as? BaseSlidingController
         vc?.openMenu()
     }
 }
