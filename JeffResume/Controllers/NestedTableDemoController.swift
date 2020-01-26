@@ -8,11 +8,11 @@
 
 import UIKit
 
-class NestedViewTabController: UIViewController {
+class NestedTableDemoController: UIViewController {
     
     //MARK:- PROPERTIES
-    var viewModel: NestedViewModel
-    var mainView = NestedViewTabView()
+    private var viewModel: NestedViewModel
+    private var mainView = NestedViewTabView()
     
     //MARK:- LIFE CYCLE
     init(viewModel: NestedViewModel) {
@@ -44,8 +44,7 @@ class NestedViewTabController: UIViewController {
     
     //MARK:- OBJC METHODS
     @objc private func openSlideMenu() {
-        let vc = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController as? BaseSlidingController
-        vc?.openMenu()
+        NotificationCenter.default.post(name: .showSlideMenu, object: nil)
     }
     
     @objc private func openFilterView(_ notification: Notification) {

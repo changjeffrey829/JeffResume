@@ -9,6 +9,7 @@
 import Foundation
 
 extension Notification.Name {
+    static let showSlideMenu = NSNotification.Name(rawValue: "showSlideMenu")
     static let filterButtonTapped = NSNotification.Name(rawValue: "filterButtonTapped")
     static let ituneURLComponentUpdated = NSNotification.Name(rawValue: "ituneURLComponentUpdated")
 }

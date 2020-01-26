@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0409144323C920440089EE66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409144223C920440089EE66 /* AppDelegate.swift */; };
 		0409144523C920440089EE66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409144423C920440089EE66 /* SceneDelegate.swift */; };
-		0409144723C920440089EE66 /* NestedViewTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409144623C920440089EE66 /* NestedViewTabController.swift */; };
+		0409144723C920440089EE66 /* NestedTableDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409144623C920440089EE66 /* NestedTableDemoController.swift */; };
 		0409144C23C920480089EE66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0409144B23C920480089EE66 /* Assets.xcassets */; };
 		0409144F23C920480089EE66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0409144D23C920480089EE66 /* LaunchScreen.storyboard */; };
 		0409145723C924BE0089EE66 /* BaseSlidingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409145623C924BE0089EE66 /* BaseSlidingController.swift */; };
@@ -53,6 +53,8 @@
 		044024A423D6CFE1003865B5 /* ItuneURLWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044024A323D6CFE1003865B5 /* ItuneURLWrapper.swift */; };
 		045CD0F423DB85B600930003 /* BaseSlidingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CD0F323DB85B600930003 /* BaseSlidingView.swift */; };
 		045CD0F623DB85FC00930003 /* BaseSlidingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CD0F523DB85FC00930003 /* BaseSlidingViewModel.swift */; };
+		045CD0F823DD200000930003 /* SelfBioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CD0F723DD200000930003 /* SelfBioController.swift */; };
+		045CD0FA23DD204D00930003 /* AnimationDemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CD0F923DD204D00930003 /* AnimationDemoController.swift */; };
 		0CEAB6DDB320B649E746DD28 /* Pods_JeffResume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EE514476A1B83C56E9D0F8 /* Pods_JeffResume.framework */; };
 		EE810F0424DCC2A9B42F3B2A /* Pods_JeffResumeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D32717CF4610150E2BB8794 /* Pods_JeffResumeTests.framework */; };
 /* End PBXBuildFile section */
@@ -73,7 +75,7 @@
 		0409143F23C920440089EE66 /* JeffResume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JeffResume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0409144223C920440089EE66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0409144423C920440089EE66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0409144623C920440089EE66 /* NestedViewTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedViewTabController.swift; sourceTree = "<group>"; };
+		0409144623C920440089EE66 /* NestedTableDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedTableDemoController.swift; sourceTree = "<group>"; };
 		0409144B23C920480089EE66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0409144E23C920480089EE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0409145023C920490089EE66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,6 +122,8 @@
 		044024A323D6CFE1003865B5 /* ItuneURLWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItuneURLWrapper.swift; sourceTree = "<group>"; };
 		045CD0F323DB85B600930003 /* BaseSlidingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlidingView.swift; sourceTree = "<group>"; };
 		045CD0F523DB85FC00930003 /* BaseSlidingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlidingViewModel.swift; sourceTree = "<group>"; };
+		045CD0F723DD200000930003 /* SelfBioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioController.swift; sourceTree = "<group>"; };
+		045CD0F923DD204D00930003 /* AnimationDemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDemoController.swift; sourceTree = "<group>"; };
 		2FA6DDEEB8BA745686FD1B64 /* Pods-JeffResumeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JeffResumeTests.debug.xcconfig"; path = "Target Support Files/Pods-JeffResumeTests/Pods-JeffResumeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		78B0B075D86D5B5755945D1F /* Pods-JeffResume.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JeffResume.release.xcconfig"; path = "Target Support Files/Pods-JeffResume/Pods-JeffResume.release.xcconfig"; sourceTree = "<group>"; };
 		9D32717CF4610150E2BB8794 /* Pods_JeffResumeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JeffResumeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,8 +234,10 @@
 			isa = PBXGroup;
 			children = (
 				0409145623C924BE0089EE66 /* BaseSlidingController.swift */,
+				045CD0F723DD200000930003 /* SelfBioController.swift */,
+				045CD0F923DD204D00930003 /* AnimationDemoController.swift */,
 				0409145823C929850089EE66 /* MenuController.swift */,
-				0409144623C920440089EE66 /* NestedViewTabController.swift */,
+				0409144623C920440089EE66 /* NestedTableDemoController.swift */,
 				0440249923D57792003865B5 /* ComingSoonController.swift */,
 				0440248D23CFB982003865B5 /* MediaSettingController.swift */,
 			);
@@ -511,7 +517,7 @@
 				0409145B23C929A70089EE66 /* CustomMenuHeaderView.swift in Sources */,
 				0409145723C924BE0089EE66 /* BaseSlidingController.swift in Sources */,
 				0440249A23D57792003865B5 /* ComingSoonController.swift in Sources */,
-				0409144723C920440089EE66 /* NestedViewTabController.swift in Sources */,
+				0409144723C920440089EE66 /* NestedTableDemoController.swift in Sources */,
 				0440247C23CE70D7003865B5 /* NestedTableCellViewModel.swift in Sources */,
 				0409145D23C929EA0089EE66 /* MenuItemCell.swift in Sources */,
 				0440248423CE9B75003865B5 /* MenuViewModel.swift in Sources */,
@@ -519,11 +525,13 @@
 				0409147E23CA6CA20089EE66 /* MockSession.swift in Sources */,
 				0440248823CEB036003865B5 /* CollectionMediaCell.swift in Sources */,
 				0440249C23D6C65A003865B5 /* NestedViewTabView.swift in Sources */,
+				045CD0F823DD200000930003 /* SelfBioController.swift in Sources */,
 				0409146123C92A8F0089EE66 /* ProfileImageView.swift in Sources */,
 				0440247A23CE70B6003865B5 /* NestedViewModel.swift in Sources */,
 				040914AD23CC4DB90089EE66 /* URLStringCreator.swift in Sources */,
 				0440249423D18237003865B5 /* MediaTypeSettingCellViewModel.swift in Sources */,
 				0409146C23CA38460089EE66 /* URLSessionExt.swift in Sources */,
+				045CD0FA23DD204D00930003 /* AnimationDemoController.swift in Sources */,
 				0409144323C920440089EE66 /* AppDelegate.swift in Sources */,
 				0440248623CEA264003865B5 /* CollectionMediaCellViewModel.swift in Sources */,
 				0409146323C92AA10089EE66 /* AnchorExtension.swift in Sources */,

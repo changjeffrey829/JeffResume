@@ -8,13 +8,17 @@
 
 import UIKit
 
+protocol BaseSlidingControllerDelegate {
+    func didSelectMenuItem(index: Int)
+}
+
 class BaseSlidingController: UIViewController {
     
     //MARK:- PROPERTIES
     let baseSlidingView: BaseSlidingView
     var viewModel: BaseSlidingViewModel
     var centerViewController: UIViewController
-    let menuController: MenuController
+    let leftViewController: MenuController
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return viewModel.isMenuOpened ? .lightContent : .default
     }
@@ -22,10 +26,10 @@ class BaseSlidingController: UIViewController {
     init(viewModel: BaseSlidingViewModel) {
         self.viewModel = viewModel
         self.centerViewController = BaseSlidingController.showDefaultViewController()
-        self.menuController = MenuController(viewModel: MenuViewModel())
-        baseSlidingView = BaseSlidingView(frame: .zero, menuWidth: viewModel.menuWidth, centerCoverView: centerViewController.view ?? UIView(), sideCoverView: menuController.view ?? UIView())
+        self.leftViewController = MenuController(viewModel: MenuViewModel())
+        baseSlidingView = BaseSlidingView(frame: .zero, menuWidth: viewModel.menuWidth, centerCoverView: centerViewController.view ?? UIView(), sideCoverView: leftViewController.view ?? UIView())
         super.init(nibName: nil, bundle: nil)
-        
+        self.leftViewController.viewModel.delegate = self
     }
     
     //MARK:- LIFE CYCLE
@@ -38,11 +42,10 @@ class BaseSlidingController: UIViewController {
         super.viewDidLoad()
         self.view = baseSlidingView
         view.backgroundColor = .white
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleShowMenu), name: .showSlideMenu, object: nil)
         setupViewControllers()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         view.addGestureRecognizer(panGesture)
-        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapDismiss))
         baseSlidingView.darkCoverView.addGestureRecognizer(tapGesture)
     }
@@ -51,6 +54,10 @@ class BaseSlidingController: UIViewController {
     //MARK:- OBJC PRIVATE METHOD
     @objc private func handleTapDismiss() {
         closeMenu()
+    }
+    
+    @objc private func handleShowMenu() {
+        openMenu()
     }
     
     @objc private func handlePan(gesture: UIPanGestureRecognizer) {
@@ -83,7 +90,7 @@ class BaseSlidingController: UIViewController {
         }
     }
     
-    private func performRightViewCleanUp() {
+    private func performCenterViewCleanUp() {
         centerViewController.view.removeFromSuperview()
         centerViewController.removeFromParent()
     }
@@ -97,7 +104,15 @@ class BaseSlidingController: UIViewController {
     
     private func setupViewControllers() {
         addChild(centerViewController)
-        addChild(menuController)
+        addChild(leftViewController)
+    }
+    
+    private func closeMenu() {
+        baseSlidingView.centerViewLeadingConstraint.constant = 0
+        baseSlidingView.centerViewTrailingConstraint.constant = 0
+        viewModel.isMenuOpened = false
+        performAnimations()
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     //MARK:- PUBLIC METHOD
@@ -108,40 +123,33 @@ class BaseSlidingController: UIViewController {
         performAnimations()
         setNeedsStatusBarAppearanceUpdate()
     }
-    
-    func closeMenu() {
-        baseSlidingView.centerViewLeadingConstraint.constant = 0
-        baseSlidingView.centerViewTrailingConstraint.constant = 0
-        viewModel.isMenuOpened = false
-        performAnimations()
-        setNeedsStatusBarAppearanceUpdate()
-    }
-    
-    
-    
+     
+}
+
+extension BaseSlidingController: BaseSlidingControllerDelegate {
     func didSelectMenuItem(index: Int) {
         closeMenu()
         switch index {
         case 0:
-            performRightViewCleanUp()
+            performCenterViewCleanUp()
             let vc = ComingSoonController()
             centerViewController = UINavigationController(rootViewController: vc)
         case 1:
-            performRightViewCleanUp()
+            performCenterViewCleanUp()
             let vm = NestedViewModel(mediaTypes: [.movies, .podcasts, .audiobooks])
-            let homeController = NestedViewTabController(viewModel: vm)
+            let homeController = NestedTableDemoController(viewModel: vm)
             centerViewController = UINavigationController(rootViewController: homeController)
         case 2:
-            performRightViewCleanUp()
+            performCenterViewCleanUp()
             let vc = ComingSoonController()
             centerViewController = UINavigationController(rootViewController: vc)
         case 3:
-            performRightViewCleanUp()
+            performCenterViewCleanUp()
             
             let vc = ComingSoonController()
             centerViewController = UINavigationController(rootViewController: vc)
         case 4:
-            performRightViewCleanUp()
+            performCenterViewCleanUp()
             let vc = ComingSoonController()
             centerViewController = UINavigationController(rootViewController: vc)
         default:

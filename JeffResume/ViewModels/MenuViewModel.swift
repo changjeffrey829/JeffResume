@@ -19,6 +19,7 @@ class MenuViewModel: NSObject, UITableViewDelegate, UITableViewDataSource {
         "Login",
         "Third Party Framework"
     ]
+    var delegate: BaseSlidingControllerDelegate?
     
     //MARK:- TABLEVIEW DELEGATE AND DATASOURCE
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -43,9 +44,8 @@ class MenuViewModel: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        if indexPath.row == 16 {return}
-        let slidingController = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController as? BaseSlidingController
-        slidingController?.didSelectMenuItem(index: indexPath.row)
+//        let slidingController = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController as? BaseSlidingController
+//        slidingController?.didSelectMenuItem(index: indexPath.row)
+        delegate?.didSelectMenuItem(index: indexPath.row)
     }
 }
