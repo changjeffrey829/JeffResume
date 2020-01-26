@@ -2,7 +2,7 @@
 This is an app version of my resume with demos of many skillsets I learned.
 
 ## UI Layout Overview
-![](https://i.imgur.com/YvB0Umfl.png)
+![](https://i.imgur.com/5SrTUGal.png)
 
 ## Supporting version
 This app requires minimum version of iOS 13.
