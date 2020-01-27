@@ -10,13 +10,13 @@ import UIKit
 
 class MediaTypeSettingCellViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    //MARK:- PROPERTIES
+    // MARK: - PROPERTIES
     let mediaType: MediaType
     let mediaSetting: MediaSetting
     let ituneURLComponents: [String]
     let currentIndex: Int
     
-    //MARK:- LIFE CYCLE
+    // MARK: - LIFE CYCLE
     init(mediaType: MediaType, mediaSetting: MediaSetting, ituneURLComponents: [String], currentIndex: Int) {
         self.mediaType = mediaType
         self.mediaSetting = mediaSetting
@@ -24,7 +24,7 @@ class MediaTypeSettingCellViewModel: NSObject, UIPickerViewDelegate, UIPickerVie
         self.currentIndex = currentIndex
     }
     
-    //MARK:- PICKERVIEW DELEGATE AND DATASOURCE
+    // MARK: - PICKERVIEW DELEGATE AND DATASOURCE
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -40,6 +40,6 @@ class MediaTypeSettingCellViewModel: NSObject, UIPickerViewDelegate, UIPickerVie
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        return AStringCreator.HelveticaAString(style: .HelveticaNeue, text: ituneURLComponents[row], size: 16, foregroundColor: .white, backgroundColor: .clear)
+        return AStringCreator.helveticaAString(style: .helveticaNeue, text: ituneURLComponents[row], size: 16, foregroundColor: .white, backgroundColor: .clear)
     }
 }

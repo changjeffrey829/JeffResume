@@ -9,26 +9,26 @@
 import UIKit
 
 enum HelveticaStyle {
-    case HelveticaNeue
-    case HelveticaNeueBold
-    case HelveticaNeueLight
-    case HelveticaNeueItalic
+    case helveticaNeue
+    case helveticaNeueBold
+    case helveticaNeueLight
+    case helveticaNeueItalic
 }
 
 struct AStringCreator {
     
     private init() {}
     
-    static func HelveticaAString(style: HelveticaStyle, text: String, size: CGFloat, foregroundColor: UIColor, backgroundColor: UIColor) -> NSAttributedString {
+    static func helveticaAString(style: HelveticaStyle, text: String, size: CGFloat, foregroundColor: UIColor, backgroundColor: UIColor) -> NSAttributedString {
         let fontNameString: String
         switch style {
-        case .HelveticaNeue:
+        case .helveticaNeue:
             fontNameString = "HelveticaNeue"
-        case .HelveticaNeueBold:
+        case .helveticaNeueBold:
             fontNameString = "HelveticaNeue-Bold"
-        case .HelveticaNeueItalic:
+        case .helveticaNeueItalic:
             fontNameString = "HelveticaNeue-Italic"
-        case .HelveticaNeueLight:
+        case .helveticaNeueLight:
             fontNameString = "HelveticaNeue-Light"
         }
         
@@ -41,21 +41,20 @@ struct AStringCreator {
         return NSAttributedString(string: text, attributes: attribute)
     }
     
-    static func HelveticaAString(style: HelveticaStyle, text: String, size: CGFloat, foregroundColor: UIColor, backgroundColor: UIColor, alignment: NSTextAlignment) -> NSAttributedString {
+    static func helveticaAString(style: HelveticaStyle, text: String, size: CGFloat, foregroundColor: UIColor, backgroundColor: UIColor, alignment: NSTextAlignment) -> NSAttributedString {
         let fontNameString: String
         switch style {
-        case .HelveticaNeue:
+        case .helveticaNeue:
             fontNameString = "HelveticaNeue"
-        case .HelveticaNeueBold:
+        case .helveticaNeueBold:
             fontNameString = "HelveticaNeue-Bold"
-        case .HelveticaNeueItalic:
+        case .helveticaNeueItalic:
             fontNameString = "HelveticaNeue-Italic"
-        case .HelveticaNeueLight:
+        case .helveticaNeueLight:
             fontNameString = "HelveticaNeue-Light"
         }
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = .center
-        
         
         let attribute: [NSAttributedString.Key : Any]
         if let font = UIFont(name: fontNameString, size: size) {

@@ -20,8 +20,8 @@ class MediaSettingView: UIView {
     }
     
     lazy var mediaTypeSettingTableView: UITableView = {
-        let tv = UITableView(frame: .zero, style: .grouped)
-        tv.backgroundColor = .black
-        return tv
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.backgroundColor = .black
+        return tableView
     }()
 }

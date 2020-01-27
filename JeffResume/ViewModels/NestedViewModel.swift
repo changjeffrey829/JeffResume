@@ -10,19 +10,19 @@ import UIKit
 
 class NestedViewModel: NSObject {
     
-    //MARK:- PROPERTIES
+    // MARK: - PROPERTIES
     private let cellHeight: CGFloat = 150
     private let mediaTypes: [MediaType]
     let cellID = "tableCellID"
     var ituneURLWrappersDict = [MediaType : ItuneURLWrapper]()
     var tableViewIndexRequireUpdate: Int?
     
-    //MARK:- LIFE CYCLE
+    // MARK: - LIFE CYCLE
     init(mediaTypes: [MediaType]) {
         self.mediaTypes = mediaTypes
     }
     
-    //MARK:- PRIVATE METHODS
+    // MARK: - PRIVATE METHODS
     private func defaultURLString(mediaType: MediaType) -> String {
         switch mediaType {
         case .movies:
@@ -47,7 +47,7 @@ class NestedViewModel: NSObject {
     }
 }
 
-//MARK:- TABLEVIEW DATASOURCE AND DELEGATE
+// MARK: - TABLEVIEW DATASOURCE AND DELEGATE
 extension NestedViewModel: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mediaTypes.count
@@ -59,8 +59,8 @@ extension NestedViewModel: UITableViewDelegate, UITableViewDataSource {
         let mediaType = mediaTypes[indexPath.row]
         let ituneURLObject = ituneURLWrappersDict[mediaType]
         let urlstring = ituneURLObject?.createItuneURLString() ?? defaultURLString(mediaType: mediaType)
-        let vm = NestedTableCellViewModel(mediaType: mediaType, urlString: urlstring)
-        cell?.viewModel = vm
+        let nestedTableCellViewModel = NestedTableCellViewModel(mediaType: mediaType, urlString: urlstring)
+        cell?.viewModel = nestedTableCellViewModel
         return cell ?? UITableViewCell()
     }
     
@@ -69,7 +69,7 @@ extension NestedViewModel: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-//MARK:- MediaSettingVCDelegate
+// MARK: - MediaSettingVCDelegate
 extension NestedViewModel: MediaSettingVCDelegate {
     func ituneURLWrapperUpdated(wrapper: ItuneURLWrapper) {
         ituneURLWrappersDict[wrapper.mediaType] = wrapper

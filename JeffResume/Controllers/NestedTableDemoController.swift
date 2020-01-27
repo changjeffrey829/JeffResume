@@ -10,11 +10,11 @@ import UIKit
 
 class NestedTableDemoController: UIViewController {
     
-    //MARK:- PROPERTIES
+    // MARK: - PROPERTIES
     private var viewModel: NestedViewModel
     private var mainView = NestedViewTabView()
     
-    //MARK:- LIFE CYCLE
+    // MARK: - LIFE CYCLE
     init(viewModel: NestedViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -42,7 +42,7 @@ class NestedTableDemoController: UIViewController {
         viewModel.tableViewIndexRequireUpdate = nil
     }
     
-    //MARK:- OBJC METHODS
+    // MARK: - OBJC METHODS
     @objc private func openSlideMenu() {
         NotificationCenter.default.post(name: .showSlideMenu, object: nil)
     }
@@ -53,9 +53,9 @@ class NestedTableDemoController: UIViewController {
             let ituneURLWrapper = viewModel.ituneURLWrappersDict[mediaType]
         else {return}
         
-        let vm = MediaTypeSettingViewModel(mediaType: mediaType, mediaSettingDatasource: [.country, .feedType, .genre, .resultLimit, .allowExplicit], ituneURLWrapper: ituneURLWrapper)
-        let vc = MediaSettingController(viewModel: vm)
-        vc.delegate = viewModel
-        navigationController?.pushViewController(vc, animated: true)
+        let mediaTypeSettingViewModel = MediaTypeSettingViewModel(mediaType: mediaType, mediaSettingDatasource: [.country, .feedType, .genre, .resultLimit, .allowExplicit], ituneURLWrapper: ituneURLWrapper)
+        let viewController = MediaSettingController(viewModel: mediaTypeSettingViewModel)
+        viewController.delegate = viewModel
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

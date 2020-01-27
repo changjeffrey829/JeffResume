@@ -16,7 +16,7 @@ class IconImageView: UIImageView {
 
 class MenuItemCell: UITableViewCell {
     
-    //MARK:- LIFE CYCLE
+    // MARK: - LIFE CYCLE
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .black
@@ -28,7 +28,7 @@ class MenuItemCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK:- PRIVATE METHOD
+    // MARK: - PRIVATE METHOD
     private func setupStackView() {
         let stackView = UIStackView(arrangedSubviews: [titleLabel])
         addSubview(stackView)
@@ -42,12 +42,12 @@ class MenuItemCell: UITableViewCell {
         stackView.layoutMargins = .init(top: 8, left: 12, bottom: 8, right: 12)
     }
     
-    //MARK:- UI ELEMENTS
+    // MARK: - UI ELEMENTS
     let iconImageView: IconImageView = {
-        let iv = IconImageView()
-        iv.contentMode = .scaleAspectFit
-        iv.image = #imageLiteral(resourceName: "FuzzyProfileImage")
-        return iv
+        let imageView = IconImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = #imageLiteral(resourceName: "FuzzyProfileImage")
+        return imageView
     }()
     
     let titleLabel: UILabel = {

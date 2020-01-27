@@ -18,6 +18,8 @@ default_platform(:ios)
 platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
+    fastlane swiftlint
+    fastlane scan
     build_app(workspace: "JeffResume.xcworkspace", scheme: "JeffResume")
     upload_to_testflight
   end

@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 enum MockURLString: String {
     case mockMovie = "https://rss.itunes.apple.com/api/v1/us/movies/top-movies/all/10/explicit.json"
     case mockPodcast = "https://rss.itunes.apple.com/api/v1/us/podcasts/top-podcasts/all/10/explicit.json"
@@ -21,7 +20,7 @@ class MockSession: DataSessionProtocol {
     var error: Error?
     func loadData(from url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         guard let path = getMockObjectPath(url: url) else {
-            error = MediaLoadingError.NoMockObject
+            error = MediaLoadingError.noMockObject
             completionHandler(data, response, error)
             return
         }

@@ -11,12 +11,12 @@ import UIKit
 enum MediaLoadingError: Error {
     case imageError
     case mediaError
-    case NoMockObject
+    case noMockObject
 }
 
 protocol MediaProtocol {
-    func loadMedia(urlString: String, completion: @escaping (Result<[MediaObject], MediaLoadingError>) ->())
-    func loadImage(urlString: String, completion: @escaping (Result<UIImage, MediaLoadingError>) -> ())
+    func loadMedia(urlString: String, completion: @escaping (Result<[MediaObject], MediaLoadingError>) -> Void)
+    func loadImage(urlString: String, completion: @escaping (Result<UIImage, MediaLoadingError>) -> Void)
 }
 
 struct NetworkService: MediaProtocol {
@@ -25,12 +25,19 @@ struct NetworkService: MediaProtocol {
         self.session = session
     }
     
-    func loadImage(urlString: String, completion: @escaping (Result<UIImage, MediaLoadingError>) -> ()) {
+    func loadImage(urlString: String, completion: @escaping (Result<UIImage, MediaLoadingError>) -> Void) {
         guard let url = URL(string: urlString) else {
             completion(.failure(MediaLoadingError.imageError))
             return}
         
         session.loadData(from: url) { (data, response, err) in
+            guard
+                let httpResponse = response as? HTTPURLResponse,
+                (200...299).contains(httpResponse.statusCode) else {
+                    completion(.failure(MediaLoadingError.imageError))
+                    return
+            }
+            
             if err != nil {
                 completion(.failure(MediaLoadingError.imageError))
                 return
@@ -46,13 +53,20 @@ struct NetworkService: MediaProtocol {
         }
     }
     
-    func loadMedia(urlString: String, completion: @escaping (Result<[MediaObject], MediaLoadingError>) -> ()) {
+    func loadMedia(urlString: String, completion: @escaping (Result<[MediaObject], MediaLoadingError>) -> Void) {
         guard let url = URL(string: urlString) else {
             completion(.failure(MediaLoadingError.mediaError))
             return
         }
         
         session.loadData(from: url) { (data, response, err) in
+            guard
+                let httpResponse = response as? HTTPURLResponse,
+                (200...299).contains(httpResponse.statusCode) else {
+                    completion(.failure(MediaLoadingError.imageError))
+                    return
+            }
+            
             if err != nil {
                 completion(.failure(MediaLoadingError.mediaError))
                 return

@@ -8,17 +8,18 @@
 
 import UIKit
 
-//MARK:- SIMPLE IMAGE CACHE
+// MARK: - SIMPLE IMAGE CACHE
 var imageCache = [String : UIImage]()
 
 class CollectionMediaCellViewModel {
     
-    //MARK:- PROPERTIES
+    // MARK: - PROPERTIES
     static let nameHeight: CGFloat = 20
     static let padding: CGFloat = 4
     private var lastUrlUsedToLoadImage: String?
     private var networkService: MediaProtocol
     private var mediaObject: MediaObject
+    private var mediaLoadingError: MediaLoadingError?
     private var mediaImage: UIImage? {
         didSet {
             bindableImage.value = mediaImage
@@ -26,13 +27,14 @@ class CollectionMediaCellViewModel {
     }
     var bindableImage = Bindable<UIImage>()
     
-    //MARK:- LIFE CYCLE
+    // MARK: - LIFE CYCLE
     init(mediaObject: MediaObject, networkService: MediaProtocol = NetworkService()) {
         self.networkService = networkService
         self.mediaObject = mediaObject
-        getImagefromURL { (result) in
+        getImagefromURL { [unowned self] (result) in
             switch result {
-            case .failure(_):
+            case .failure(let error):
+                self.mediaLoadingError = error
                 self.mediaImage = nil
             case .success(let image):
                 self.mediaImage = image
@@ -40,12 +42,12 @@ class CollectionMediaCellViewModel {
         }
     }
     
-    //MARK:- METHODS
+    // MARK: - METHODS
     func getMediaName() -> NSAttributedString {
-        return AStringCreator.HelveticaAString(style: .HelveticaNeue, text: mediaObject.name, size: 16, foregroundColor: .black, backgroundColor: .clear)
+        return AStringCreator.helveticaAString(style: .helveticaNeue, text: mediaObject.name, size: 16, foregroundColor: .black, backgroundColor: .clear)
     }
     
-    func getImagefromURL(completion: @escaping (Result<UIImage, MediaLoadingError>) -> ()) {
+    func getImagefromURL(completion: @escaping (Result<UIImage, MediaLoadingError>) -> Void) {
         let urlString = mediaObject.artworkUrl100
         lastUrlUsedToLoadImage = urlString
         if let cachedimage = imageCache[urlString] {

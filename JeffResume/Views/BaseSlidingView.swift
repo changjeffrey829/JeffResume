@@ -38,8 +38,6 @@ class BaseSlidingView: UIView {
         centerViewTrailingConstraint = centerView.trailingAnchor.constraint(equalTo: trailingAnchor)
         centerViewTrailingConstraint.isActive = true
         
-        
-        
         centerCoverView.translatesAutoresizingMaskIntoConstraints = false
         sideCoverView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -62,9 +60,8 @@ class BaseSlidingView: UIView {
             darkCoverView.topAnchor.constraint(equalTo: centerView.topAnchor),
             darkCoverView.leadingAnchor.constraint(equalTo: centerView.leadingAnchor),
             darkCoverView.bottomAnchor.constraint(equalTo: centerView.bottomAnchor),
-            darkCoverView.trailingAnchor.constraint(equalTo: centerView.trailingAnchor),
+            darkCoverView.trailingAnchor.constraint(equalTo: centerView.trailingAnchor)
             ])
-        
     }
     
     required init?(coder: NSCoder) {
@@ -76,22 +73,22 @@ class BaseSlidingView: UIView {
     let sideCoverView: UIView
     
     let centerView: CenterContainerView = {
-        let v = CenterContainerView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        return v
+        let view = CenterContainerView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     let sideView: MenuContainerView = {
-        let v = MenuContainerView()
-        v.translatesAutoresizingMaskIntoConstraints = false
-        return v
+        let view = MenuContainerView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     let darkCoverView: DarkCoverView = {
-        let v = DarkCoverView()
-        v.backgroundColor = UIColor(white: 0, alpha: 0.7)
-        v.alpha = 0
-        v.translatesAutoresizingMaskIntoConstraints = false
-        return v
+        let view = DarkCoverView()
+        view.backgroundColor = UIColor(white: 0, alpha: 0.7)
+        view.alpha = 0
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
 }

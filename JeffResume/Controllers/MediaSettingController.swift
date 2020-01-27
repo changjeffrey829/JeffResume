@@ -8,18 +8,18 @@
 
 import UIKit
 
-protocol MediaSettingVCDelegate {
+protocol MediaSettingVCDelegate: AnyObject {
     func ituneURLWrapperUpdated(wrapper: ItuneURLWrapper)
 }
 
 class MediaSettingController: UIViewController {
     
-    //MARK:- PROPERTIES
+    // MARK: - PROPERTIES
     let viewModel: MediaTypeSettingViewModel
     let mainView = MediaSettingView()
-    var delegate: MediaSettingVCDelegate?
+    weak var delegate: MediaSettingVCDelegate?
     
-    //MARK:- LIFE CYCLE
+    // MARK: - LIFE CYCLE
     init(viewModel: MediaTypeSettingViewModel) {
         self.viewModel = viewModel
         mainView.mediaTypeSettingTableView.delegate = viewModel
@@ -40,7 +40,7 @@ class MediaSettingController: UIViewController {
         mainView.mediaTypeSettingTableView.register(MediaTypeSettingTableViewCell.self, forCellReuseIdentifier: MediaTypeSettingViewModel.cellID)
     }
     
-    //MARK:- OBJC PRIVATE METHODS
+    // MARK: - OBJC PRIVATE METHODS
     @objc private func saveFilterSetting() {
         navigationController?.popViewController(animated: true)
         delegate?.ituneURLWrapperUpdated(wrapper: viewModel.ituneURLWrapper)
@@ -51,5 +51,3 @@ class MediaSettingController: UIViewController {
         viewModel.updateURLWrapper(selectedMediaSetting: mediaTuple.mediaSetting, urlComponentString: mediaTuple.ituneURLComponent)
     }
 }
-
-

@@ -46,11 +46,8 @@ class MediaTypeSettingTableViewCell: UITableViewCell {
     }()
     
     lazy var pickerView: UIPickerView = {
-        let pv = UIPickerView(frame: .zero)
-        pv.backgroundColor = .black
-        return pv
+        let pickerView = UIPickerView(frame: .zero)
+        pickerView.backgroundColor = .black
+        return pickerView
     }()
 }
-
-
-

@@ -10,7 +10,7 @@ import UIKit
 
 class NestedViewTabView: UIView {
     
-    //MARK:- LIFE CYCLE
+    // MARK: - LIFE CYCLE
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(mainTableView)
@@ -22,7 +22,7 @@ class NestedViewTabView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK:- UI ELEMENTS
+    // MARK: - UI ELEMENTS
     lazy var menuButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "FuzzyProfileImage"), for: .normal)
@@ -36,8 +36,8 @@ class NestedViewTabView: UIView {
     }()
     
     lazy var mainTableView: UITableView = {
-        let tv = UITableView(frame: .zero, style: .grouped)
-        tv.backgroundColor = .black
-        return tv
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.backgroundColor = .black
+        return tableView
     }()
 }

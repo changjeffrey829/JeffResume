@@ -17,11 +17,11 @@ struct BaseSlidingViewModel {
         self.velocityThreshold = velocityThreshold
     }
     
-    func panGestureXCalculation(x: CGFloat) -> CGFloat {
-        var x = x
-        x = isMenuOpened ? x + menuWidth : x
-        x = min(menuWidth, x)
-        return max(0, x)
+    func panGestureXCalculation(gestureTranslationX: CGFloat) -> CGFloat {
+        var transX = gestureTranslationX
+        transX = isMenuOpened ? transX + menuWidth : transX
+        transX = min(menuWidth, transX)
+        return max(0, transX)
     }
     
     func shouldOpenMenu(translation: CGPoint, velocity: CGPoint) -> Bool {

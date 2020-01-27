@@ -16,7 +16,6 @@ struct ItuneURLWrapper {
     var resultLimit: Int
     var allowExplicit: Bool
     
-    
     init(mediaType: MediaType, country: ItuneURLCountry, resultLimit: Int, allowExplicit: Bool, feedType: ItuneURLFeedType, genre: ItuneURLGenre) {
         self.mediaType = mediaType
         self.country = country
