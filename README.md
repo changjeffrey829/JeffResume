@@ -1,5 +1,7 @@
 # JeffResume
 This is an app version of my resume with demos of many skillsets I learned.
+[![changjeffrey829](https://circleci.com/gh/changjeffrey829/JeffResume.svg?style=svg)](https://circleci.com/gh/changjeffrey829/JeffResume)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
 ## UI Layout Overview
 ![](https://i.imgur.com/5SrTUGal.png)
@@ -7,13 +9,16 @@ This is an app version of my resume with demos of many skillsets I learned.
 ## Supporting version
 This app requires minimum version of iOS 13.
 
+## Cocoapod Dependencies
+- [SwiftLint](https://github.com/realm/SwiftLint)
+
 ## Content
 - [Base Sliding Controller](#base-sliding-controller)
 - [Menu Controller](#menu-controller)
 - [Self Bio Controller](#self-bio-controller)
 - [Nested Table View Demo Controller](#nested-table-view-demo-controller)
 - [Animation Demo Controller](#animation-demo-controller)
-- [login-demo-controller](#login-demo-controller)
+- [Login Demo Controller](#login-demo-controller)
 - [License](#license)
 
 ## Base Sliding Controller
@@ -31,6 +36,9 @@ The slide menu which is ```MenuController``` and can be swap with any ```UIVewCo
 ## Menu Controller
 This controller is responsible for display menu and tell ```BaseSlidingController``` which view to show by index.
 
+### Screenshot
+![](https://i.imgur.com/XmpVaCZl.png)
+
 ### Change Datasource of Menu Controller
 You can update the datasource inside ```viewModel: MenuViewModel```. It is an array of String as ```menuItems: [String]```. Keep in mind row count must match the index of ```didSelectMenuItem(index: Int)``` in ```BaseSlidingController```. 
 
@@ -40,7 +48,10 @@ Coming soon
 ## Nested Table View Demo Controller
 This controller demostrate how to construct TableView with nested CollectionView. Data is from rss itune and this the base url https://rss.itunes.apple.com/api/v1/.
 
-### UI Layout constructure
+### Screenshot
+![](https://i.imgur.com/5tf5fwIl.png)
+
+### UI Wireframe
 ![](https://i.imgur.com/JmZiFE2l.png)
 
 ### Network
