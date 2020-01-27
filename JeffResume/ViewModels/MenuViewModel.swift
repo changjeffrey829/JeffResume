@@ -10,7 +10,7 @@ import UIKit
 
 class MenuViewModel: NSObject, UITableViewDelegate, UITableViewDataSource {
     
-    //MARK:- PROPERTIES
+    // MARK: - PROPERTIES
     private let menuCellID = "menuCellID"
     private let headerHeight: CGFloat = 200
     private let menuItems = [
@@ -19,9 +19,9 @@ class MenuViewModel: NSObject, UITableViewDelegate, UITableViewDataSource {
         "Login",
         "Third Party Framework"
     ]
-    var delegate: BaseSlidingControllerDelegate?
+    weak var delegate: BaseSlidingControllerDelegate?
     
-    //MARK:- TABLEVIEW DELEGATE AND DATASOURCE
+    // MARK: - TABLEVIEW DELEGATE AND DATASOURCE
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let customHeaderView = CustomMenuHeaderView()
         return customHeaderView
@@ -38,7 +38,7 @@ class MenuViewModel: NSObject, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = MenuItemCell(style: .default, reuseIdentifier: menuCellID)
         let menuItem = menuItems[indexPath.row]
-        cell.titleLabel.attributedText = AStringCreator.HelveticaAString(style: .HelveticaNeue, text: menuItem, size: 16, foregroundColor: .white, backgroundColor: .clear)
+        cell.titleLabel.attributedText = AStringCreator.helveticaAString(style: .helveticaNeue, text: menuItem, size: 16, foregroundColor: .white, backgroundColor: .clear)
         return cell
     }
     

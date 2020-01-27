@@ -17,12 +17,12 @@ enum ItuneURLAudiobooksFeedType: String, CaseIterable, ItuneURLFeedType {
     static let allValues = [topAudiobooks]
 }
 
-enum ItuneURLMoviesFeedType: String, CaseIterable , ItuneURLFeedType{
+enum ItuneURLMoviesFeedType: String, CaseIterable , ItuneURLFeedType {
     case topMovies = "top-movies"
     static let allValues = [topMovies]
 }
 
-enum ItuneURLPodcastsFeedType: String, CaseIterable , ItuneURLFeedType{
+enum ItuneURLPodcastsFeedType: String, CaseIterable , ItuneURLFeedType {
     case topPodcasts = "top-podcasts"
     static let allValues = [topPodcasts]
 }

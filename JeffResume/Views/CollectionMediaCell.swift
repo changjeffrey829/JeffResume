@@ -10,7 +10,7 @@ import UIKit
 
 class CollectionMediaCell: UICollectionViewCell {
     
-    //MARK:- PROPERTIES
+    // MARK: - PROPERTIES
     let nameHeight = CollectionMediaCellViewModel.nameHeight
     let padding = CollectionMediaCellViewModel.padding
     var viewModel: CollectionMediaCellViewModel? {
@@ -24,7 +24,7 @@ class CollectionMediaCell: UICollectionViewCell {
         }
     }
     
-    //MARK:- LIFE CYCLE
+    // MARK: - LIFE CYCLE
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -45,7 +45,7 @@ class CollectionMediaCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK:- UI ELEMENTS
+    // MARK: - UI ELEMENTS
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Name"
@@ -55,13 +55,12 @@ class CollectionMediaCell: UICollectionViewCell {
     }()
     
     var mediaImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.contentMode = .scaleAspectFit
-        iv.clipsToBounds = true
-        iv.layer.cornerRadius = 10
-        iv.image = #imageLiteral(resourceName: "FuzzyProfileImage")
-        iv.clipsToBounds = true
-        return iv
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 10
+        imageView.image = #imageLiteral(resourceName: "FuzzyProfileImage")
+        imageView.clipsToBounds = true
+        return imageView
     }()
 }
-

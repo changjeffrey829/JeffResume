@@ -10,14 +10,14 @@ import UIKit
 
 class MediaTypeSettingViewModel: NSObject {
     
-    //MARK:- PROPERTIES
+    // MARK: - PROPERTIES
     static let cellID = "MediaTypeSettingTableViewCellID"
     let mediaType: MediaType
     var selectedMediaSetting: MediaSetting?
     let mediaSettingDatasource: [MediaSetting]
     var ituneURLWrapper: ItuneURLWrapper
     
-    //MARK:- LIFE CYCLE
+    // MARK: - LIFE CYCLE
     init(mediaType: MediaType, mediaSettingDatasource: [MediaSetting], ituneURLWrapper: ItuneURLWrapper) {
         self.mediaType = mediaType
         self.mediaSettingDatasource = mediaSettingDatasource
@@ -25,7 +25,7 @@ class MediaTypeSettingViewModel: NSObject {
         super.init()
     }
     
-    //MARK:- PUBLIC METHOD
+    // MARK: - PUBLIC METHOD
     func updateURLWrapper(selectedMediaSetting: MediaSetting, urlComponentString: String) {
         switch selectedMediaSetting {
         case .country:
@@ -41,7 +41,7 @@ class MediaTypeSettingViewModel: NSObject {
         }
     }
     
-    //MARK:- PRIVATE METHOD
+    // MARK: - PRIVATE METHOD
     private func updateGenre(urlComponentString: String) {
         switch mediaType {
         case .movies:
@@ -323,4 +323,3 @@ extension MediaTypeSettingViewModel: UITableViewDataSource, UITableViewDelegate 
         }
     }
 }
-

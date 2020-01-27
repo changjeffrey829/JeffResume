@@ -10,7 +10,7 @@ import UIKit
 
 class ComingSoonView: UIView {
     
-    //MARK:- LIFE CYCLE
+    // MARK: - LIFE CYCLE
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .black
@@ -24,7 +24,7 @@ class ComingSoonView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK:- UI ELEMENTS
+    // MARK: - UI ELEMENTS
     lazy var menuButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "FuzzyProfileImage"), for: .normal)

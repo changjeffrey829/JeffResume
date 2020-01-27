@@ -10,7 +10,7 @@ import UIKit
 
 class NestedTableViewCell: UITableViewCell {
     
-    //MARK:- PROPERTIES
+    // MARK: - PROPERTIES
     var viewModel: NestedTableCellViewModel? {
         didSet {
             viewModel?.bindableMediaObjects.bind(observer: { (titleString) in
@@ -25,7 +25,7 @@ class NestedTableViewCell: UITableViewCell {
         }
     }
     
-    //MARK:- LIFE CYCLE
+    // MARK: - LIFE CYCLE
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .black
@@ -43,7 +43,7 @@ class NestedTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK:- OBJC PRIVATE METHOD
+    // MARK: - OBJC PRIVATE METHOD
     @objc private func filterButtonTapped() {
         let filterButtonName = NotificationUserInfoType.filterButton.rawValue
         let mediaType = viewModel?.mediaType ?? MediaType.movies
@@ -51,7 +51,7 @@ class NestedTableViewCell: UITableViewCell {
         NotificationCenter.default.post(name: .filterButtonTapped, object: nil, userInfo: userInfo)
     }
     
-    //MARK:- UI ELEMENTS
+    // MARK: - UI ELEMENTS
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Loading..."
@@ -72,8 +72,8 @@ class NestedTableViewCell: UITableViewCell {
     lazy var detailCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .black
-        return cv
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .black
+        return collectionView
     }()
 }

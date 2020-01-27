@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='JeffResumeTests.xctest' tests='8' failures='0'>
+  <testsuite name='JeffResumeTests.NetworkServiceTests' tests='8' failures='0'>
+    <testcase classname='JeffResumeTests.NetworkServiceTests' name='testAPIResultLimitMoreThan100Equals100' time='0.002'/>
+    <testcase classname='JeffResumeTests.NetworkServiceTests' name='testErrorLoadMediaFromServer' time='0.001'/>
+    <testcase classname='JeffResumeTests.NetworkServiceTests' name='testLoadAudiobooksFromMockServer' time='0.007'/>
+    <testcase classname='JeffResumeTests.NetworkServiceTests' name='testLoadMovieFromMockServer' time='0.002'/>
+    <testcase classname='JeffResumeTests.NetworkServiceTests' name='testLoadPodCastFromMockServer' time='0.003'/>
+    <testcase classname='JeffResumeTests.NetworkServiceTests' name='testStructureAudiobooksAPICorrectly' time='0.001'/>
+    <testcase classname='JeffResumeTests.NetworkServiceTests' name='testStructureMoviesAPICorrectly' time='0.001'/>
+    <testcase classname='JeffResumeTests.NetworkServiceTests' name='testStructurePodcastsAPICorrectly' time='0.001'/>
+  </testsuite>
+</testsuites>

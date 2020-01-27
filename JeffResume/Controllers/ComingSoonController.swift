@@ -10,13 +10,12 @@ import UIKit
 
 class ComingSoonController: UIViewController {
     
-    //MARK:- PROPERTY
+    // MARK: - PROPERTY
     let mainView = ComingSoonView()
     
-    //MARK:- LIFE CYCLE
+    // MARK: - LIFE CYCLE
     init() {
         super.init(nibName: nil, bundle: nil)
-        
     }
     
     required init?(coder: NSCoder) {
@@ -31,9 +30,8 @@ class ComingSoonController: UIViewController {
         
     }
     
-    //MARK:- OBJC PRIVATE METHOD
+    // MARK: - OBJC PRIVATE METHOD
     @objc private func openSlideMenu() {
-        let vc = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController as? BaseSlidingController
-        vc?.openMenu()
+        NotificationCenter.default.post(name: .showSlideMenu, object: nil)
     }
 }

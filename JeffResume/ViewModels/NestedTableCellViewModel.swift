@@ -10,9 +10,10 @@ import UIKit
 
 class NestedTableCellViewModel: NSObject {
     
-    //MARK:- PROPERTIES
+    // MARK: - PROPERTIES
     private let networkService: MediaProtocol
     private var cellHeight: CGFloat = 100
+    private var mediaLoadingError: MediaLoadingError?
     private var mediaObjects = [MediaObject]() {
         didSet {
             bindableMediaObjects.value = titleText()
@@ -22,14 +23,15 @@ class NestedTableCellViewModel: NSObject {
     let mediaType: MediaType
     var bindableMediaObjects = Bindable<String>()
     
-    //MARK:- LIFE CYCLE
+    // MARK: - LIFE CYCLE
     init(mediaType: MediaType, urlString: String, networkService: MediaProtocol = NetworkService()) {
         self.networkService = networkService
         self.mediaType = mediaType
         super.init()
         loadMedia(urlString: urlString) { (result) in
             switch result {
-            case .failure(_):
+            case .failure(let error):
+                self.mediaLoadingError = error
                 self.mediaObjects = []
             case .success(let jsonObjects):
                 self.mediaObjects = jsonObjects
@@ -37,7 +39,7 @@ class NestedTableCellViewModel: NSObject {
         }
     }
     
-    //MARK:- METHODS
+    // MARK: - METHODS
     private func createCollectionMediaViewModel(index: Int) -> CollectionMediaCellViewModel {
         let mediaObject = mediaObjects[index]
         return CollectionMediaCellViewModel(mediaObject: mediaObject)
@@ -47,14 +49,14 @@ class NestedTableCellViewModel: NSObject {
         return mediaType.rawValue
     }
     
-    func loadMedia(urlString: String, completion: @escaping (Result<[MediaObject], MediaLoadingError>) -> ()) {
+    func loadMedia(urlString: String, completion: @escaping (Result<[MediaObject], MediaLoadingError>) -> Void) {
         networkService.loadMedia(urlString: urlString) { (result) in
             completion(result)
         }
     }
 }
 
-//MARK:- COLLECTIONVIEW DELEGATE, DATASOURCE, AND DELEGATEFLOWLAYOUT
+// MARK: - COLLECTIONVIEW DELEGATE, DATASOURCE, AND DELEGATEFLOWLAYOUT
 extension NestedTableCellViewModel: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return mediaObjects.count
@@ -73,4 +75,3 @@ extension NestedTableCellViewModel: UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: cellHeight, height: cellHeight)
     }
 }
-

@@ -6,7 +6,7 @@ target 'JeffResume' do
   use_frameworks!
 
   # Pods for JeffResume
-pod 'GoogleSignIn'
+pod 'SwiftLint'
 
   target 'JeffResumeTests' do
     inherit! :search_paths
