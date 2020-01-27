@@ -27,6 +27,7 @@ class MockSession: DataSessionProtocol {
         let url = URL(fileURLWithPath: path)
         do {
             data = try Data(contentsOf: url)
+            response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: "mock", headerFields: nil)
         } catch let err {
             error = err
         }
