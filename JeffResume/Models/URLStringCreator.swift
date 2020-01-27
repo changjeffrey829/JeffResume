@@ -10,22 +10,40 @@ import Foundation
 
 struct URLStringCreator {
     private init() {}
-    static func createMoviesAPI(country: ItuneURLCountry, feedType: ItuneURLMoviesFeedType, genre: ItuneURLMoviesGenre, resultLimit: Int, allowExplicit: Bool) -> String {
-        return constructURLString(mediaType: .movies, country: country.rawValue, feedtype: feedType.rawValue, genre: genre.rawValue, resultLimit: resultLimit, allowExplicit: allowExplicit)
+    
+    static func createItuneURLString(mediaType: MediaType, country: ItuneURLCountry, feedType: ItuneURLFeedType, genre: ItuneURLGenre, resultLimit: Int, allowExplicit: Bool) -> String? {
+        let feedTypeString: String
+        let genreString: String
+        switch mediaType {
+        case .movies:
+            guard
+                let feedType = feedType as? ItuneURLMoviesFeedType,
+                let genre = genre as? ItuneURLMoviesGenre
+                else {return nil}
+            feedTypeString = feedType.rawValue
+            genreString = genre.rawValue
+        case .audiobooks:
+            guard
+                let feedType = feedType as? ItuneURLAudiobooksFeedType,
+                let genre = genre as? ItuneURLAudiobooksGenre
+                else {return nil}
+            feedTypeString = feedType.rawValue
+            genreString = genre.rawValue
+        case .podcasts:
+            guard
+                let feedType = feedType as? ItuneURLPodcastsFeedType,
+                let genre = genre as? ItuneURLPodcastsGenre
+                else {return nil}
+            feedTypeString = feedType.rawValue
+            genreString = genre.rawValue
+        }
+        return constructURLString(mediaType: mediaType, country: country, feedtype: feedTypeString, genre: genreString, resultLimit: resultLimit, allowExplicit: allowExplicit)
     }
     
-    static func createPodcastsAPI(country: ItuneURLCountry, feedType: ItuneURLPodcastsFeedType, genre: ItuneURLPodcastsGenre, resultLimit: Int, allowExplicit: Bool) -> String {
-        return constructURLString(mediaType: .podcasts, country: country.rawValue, feedtype: feedType.rawValue, genre: genre.rawValue, resultLimit: resultLimit, allowExplicit: allowExplicit)
-    }
-    
-    static func createAudiobooksAPI(country: ItuneURLCountry, feedType: ItuneURLAudiobooksFeedType, genre: ItuneURLAudiobooksGenre, resultLimit: Int, allowExplicit: Bool) -> String {
-        return constructURLString(mediaType: .audiobooks, country: country.rawValue, feedtype: feedType.rawValue, genre: genre.rawValue, resultLimit: resultLimit, allowExplicit: allowExplicit)
-    }
-    
-    static private func constructURLString(mediaType: MediaType, country: String, feedtype: String, genre: String, resultLimit: Int, allowExplicit: Bool) -> String {
+    static private func constructURLString(mediaType: MediaType, country: ItuneURLCountry, feedtype: String, genre: String, resultLimit: Int, allowExplicit: Bool) -> String {
         let explicit = allowExplicit ? "explicit" : "non-explicit"
         let checkedResultLimit = resultLimit <= 100 ? resultLimit : 100
-        return BaseURL.itunesRSS.rawValue + "\(country)/\(mediaType.rawValue)/\(feedtype)/\(genre)/\(checkedResultLimit)/\(explicit).json"
+        return BaseURL.itunesRSS.rawValue + "\(country.rawValue)/\(mediaType.rawValue)/\(feedtype)/\(genre)/\(checkedResultLimit)/\(explicit).json"
     }
     
 }

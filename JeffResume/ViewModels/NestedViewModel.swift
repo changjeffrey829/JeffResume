@@ -23,7 +23,7 @@ class NestedViewModel: NSObject {
     }
     
     // MARK: - PRIVATE METHODS
-    private func defaultURLString(mediaType: MediaType) -> String {
+    private func defaultURLString(mediaType: MediaType) -> String? {
         switch mediaType {
         case .movies:
             let feedType = ItuneURLMoviesFeedType.topMovies as ItuneURLFeedType

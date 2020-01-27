@@ -24,10 +24,14 @@ class NestedTableCellViewModel: NSObject {
     var bindableMediaObjects = Bindable<String>()
     
     // MARK: - LIFE CYCLE
-    init(mediaType: MediaType, urlString: String, networkService: MediaProtocol = NetworkService()) {
+    init(mediaType: MediaType, urlString: String?, networkService: MediaProtocol = NetworkService()) {
         self.networkService = networkService
         self.mediaType = mediaType
         super.init()
+        guard let urlString = urlString else {
+            self.mediaLoadingError = .noURLString
+            return
+        }
         loadMedia(urlString: urlString) { (result) in
             switch result {
             case .failure(let error):

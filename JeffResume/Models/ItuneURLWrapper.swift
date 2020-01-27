@@ -25,20 +25,20 @@ struct ItuneURLWrapper {
         self.genre = genre
     }
     
-    func createItuneURLString() -> String {
+    func createItuneURLString() -> String? {
         switch mediaType {
         case .movies:
             let feedType = self.feedType as? ItuneURLMoviesFeedType ?? ItuneURLMoviesFeedType.topMovies
             let genre = self.genre as? ItuneURLMoviesGenre ?? ItuneURLMoviesGenre.all
-            return URLStringCreator.createMoviesAPI(country: country, feedType: feedType, genre: genre, resultLimit: resultLimit, allowExplicit: allowExplicit)
+            return URLStringCreator.createItuneURLString(mediaType: mediaType, country: country, feedType: feedType, genre: genre, resultLimit: resultLimit, allowExplicit: allowExplicit)
         case .podcasts:
             let feedType = self.feedType as? ItuneURLPodcastsFeedType ?? ItuneURLPodcastsFeedType.topPodcasts
             let genre = self.genre as? ItuneURLPodcastsGenre ?? ItuneURLPodcastsGenre.all
-            return URLStringCreator.createPodcastsAPI(country: country, feedType: feedType, genre: genre, resultLimit: resultLimit, allowExplicit: allowExplicit)
+            return URLStringCreator.createItuneURLString(mediaType: mediaType, country: country, feedType: feedType, genre: genre, resultLimit: resultLimit, allowExplicit: allowExplicit)
         case .audiobooks:
             let feedType = self.feedType as? ItuneURLAudiobooksFeedType ?? ItuneURLAudiobooksFeedType.topAudiobooks
             let genre = self.genre as? ItuneURLAudiobooksGenre ?? ItuneURLAudiobooksGenre.all
-            return URLStringCreator.createAudiobooksAPI(country: country, feedType: feedType, genre: genre, resultLimit: resultLimit, allowExplicit: allowExplicit)
+            return URLStringCreator.createItuneURLString(mediaType: mediaType, country: country, feedType: feedType, genre: genre, resultLimit: resultLimit, allowExplicit: allowExplicit)
         }
     }
 }

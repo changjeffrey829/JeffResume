@@ -11,30 +11,6 @@ import XCTest
 
 class NetworkServiceTests: XCTestCase {
     
-    func testStructureMoviesAPICorrectly() {
-        let mockMovieAPIString = "https://rss.itunes.apple.com/api/v1/jp/movies/top-movies/all/10/explicit.json"
-        let urlString = URLStringCreator.createMoviesAPI(country: .japan, feedType: .topMovies, genre: .all, resultLimit: 10, allowExplicit: true)
-        XCTAssertEqual(mockMovieAPIString, urlString, "urlString needs to match mockString")
-    }
-    
-    func testStructurePodcastsAPICorrectly() {
-        let mockPodcastsAPIString = "https://rss.itunes.apple.com/api/v1/gb/podcasts/top-podcasts/all/10/explicit.json"
-        let urlString = URLStringCreator.createPodcastsAPI(country: .unitedKingdom, feedType: .topPodcasts, genre: .all, resultLimit: 10, allowExplicit: true)
-        XCTAssertEqual(mockPodcastsAPIString, urlString, "urlString needs to match mockString")
-    }
-    
-    func testStructureAudiobooksAPICorrectly() {
-        let mockPodcastsAPIString = "https://rss.itunes.apple.com/api/v1/us/audiobooks/top-audiobooks/all/10/explicit.json"
-        let urlString = URLStringCreator.createAudiobooksAPI(country: .unitedStates, feedType: .topAudiobooks, genre: .all, resultLimit: 10, allowExplicit: true)
-        XCTAssertEqual(mockPodcastsAPIString, urlString, "urlString needs to match mockString")
-    }
-    
-    func testAPIResultLimitMoreThan100Equals100() {
-        let urlString = URLStringCreator.createMoviesAPI(country: .unitedStates, feedType: .topMovies, genre: .all, resultLimit: 200, allowExplicit: true)
-        let mockMovieAPIString = "https://rss.itunes.apple.com/api/v1/us/movies/top-movies/all/100/explicit.json"
-        XCTAssertEqual(mockMovieAPIString, urlString, "urlString needs to match mockString")
-    }
-    
     func testLoadMovieFromMockServer() {
         let mock = MockSession()
         let sut = NetworkService(session: mock)

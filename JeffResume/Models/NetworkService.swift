@@ -12,6 +12,7 @@ enum MediaLoadingError: Error {
     case imageError
     case mediaError
     case noMockObject
+    case noURLString
 }
 
 protocol MediaProtocol {
