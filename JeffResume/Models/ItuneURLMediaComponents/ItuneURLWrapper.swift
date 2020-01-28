@@ -29,11 +29,11 @@ struct ItuneURLWrapper {
         let mediaComponent: ItuneMediaComponent
         switch mediaType {
         case .movies:
-            mediaComponent = ItuneURLMovieComponent(feedTypeOption: .topMovies, genre: .all)
+            mediaComponent = ItuneURLMediaComponent(movieFeedTypeOption: .topMovies, movieGenre: .all)
         case .podcasts:
-            mediaComponent = ItuneURLPodcastComponent(feedTypeOption: .topPodcasts, genre: .all)
+            mediaComponent = ItuneURLMediaComponent(podcastFeedTypeOption: .topPodcasts, podcastGenre: .all)
         case .audiobooks:
-            mediaComponent = ItuneURLAudiobookComponent(feedTypeOption: .topAudiobooks, genre: .all)
+            mediaComponent = ItuneURLMediaComponent(audiobookFeedTypeOption: .topAudiobooks, audiobookGenre: .all)
         }
         return URLStringCreator.createItuneURLString(ituneMediaComponent: mediaComponent, country: country, resultLimit: resultLimit, allowExplicit: allowExplicit)
     }

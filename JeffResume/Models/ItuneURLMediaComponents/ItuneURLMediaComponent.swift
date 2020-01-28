@@ -8,16 +8,17 @@
 
 import Foundation
 
-struct ItuneURLMovieComponent: ItuneMediaComponent {
-    var mediaType = MediaType.movies
+struct ItuneURLMediaComponent: ItuneMediaComponent {
+    var mediaType: MediaType
     var feedTypeURLString: String
     var genreURLString: String
-    init(feedTypeOption: ItuneURLMoviesFeedType, genre: ItuneURLMoviesGenre) {
-        switch feedTypeOption {
+    init(movieFeedTypeOption: ItuneURLMoviesFeedType, movieGenre: ItuneURLMoviesGenre) {
+        self.mediaType = .movies
+        switch movieFeedTypeOption {
         case .topMovies:
             feedTypeURLString = "top-movies"
         }
-        switch genre {
+        switch movieGenre {
         case .all:
             genreURLString = "all"
         case .actionAndAdventure:
@@ -26,34 +27,26 @@ struct ItuneURLMovieComponent: ItuneMediaComponent {
             genreURLString = "documentary"
         }
     }
-}
-
-struct ItuneURLPodcastComponent: ItuneMediaComponent {
-    var mediaType = MediaType.podcasts
-    var feedTypeURLString: String
-    var genreURLString: String
-    init(feedTypeOption: ItuneURLPodcastsFeedType, genre: ItuneURLPodcastsGenre) {
-        switch feedTypeOption {
+    
+    init(podcastFeedTypeOption: ItuneURLPodcastsFeedType, podcastGenre: ItuneURLPodcastsGenre) {
+        self.mediaType = .podcasts
+        switch podcastFeedTypeOption {
         case .topPodcasts:
             feedTypeURLString = "top-podcasts"
         }
-        switch genre {
+        switch podcastGenre {
         case .all:
             genreURLString = "all"
         }
     }
-}
-
-struct ItuneURLAudiobookComponent: ItuneMediaComponent {
-    var mediaType = MediaType.audiobooks
-    var feedTypeURLString: String
-    var genreURLString: String
-    init(feedTypeOption: ItuneURLAudiobooksFeedType, genre: ItuneURLAudiobooksGenre) {
-        switch feedTypeOption {
+    
+    init(audiobookFeedTypeOption: ItuneURLAudiobooksFeedType, audiobookGenre: ItuneURLAudiobooksGenre) {
+        self.mediaType = .audiobooks
+        switch audiobookFeedTypeOption {
         case .topAudiobooks:
             feedTypeURLString = "top-audiobooks"
         }
-        switch genre {
+        switch audiobookGenre {
         case .all:
             genreURLString = "all"
         }

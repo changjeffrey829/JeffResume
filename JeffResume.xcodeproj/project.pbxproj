@@ -262,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				0409145E23C92A6C0089EE66 /* AStringCreator.swift */,
+				045CD10623DFB39B00930003 /* DisplayableStringConverter.swift */,
+				040914AC23CC4DB90089EE66 /* URLStringCreator.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -310,7 +312,6 @@
 				045CD10223DFA82A00930003 /* ItuneURLMediaComponent.swift */,
 				044024A323D6CFE1003865B5 /* ItuneURLWrapper.swift */,
 				0409148223CA6CE60089EE66 /* MediaType.swift */,
-				040914AC23CC4DB90089EE66 /* URLStringCreator.swift */,
 			);
 			path = ItuneURLMediaComponents;
 			sourceTree = "<group>";
@@ -319,7 +320,6 @@
 			isa = PBXGroup;
 			children = (
 				045CD10423DFB04100930003 /* DisplayableString.swift */,
-				045CD10623DFB39B00930003 /* DisplayableStringConverter.swift */,
 				044024A123D6CD5E003865B5 /* MediaSetting.swift */,
 			);
 			path = ItuneDisplayableComponents;
