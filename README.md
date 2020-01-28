@@ -6,7 +6,7 @@ This is an app version of my resume with demos of many skillsets I learned.
 ## UI Layout Overview
 ![](https://i.imgur.com/5SrTUGal.png)
 
-## Supporting version
+## Supporting Version
 This app requires minimum version of iOS 13.
 
 ## Cocoapod Dependencies
@@ -46,7 +46,7 @@ You can update the datasource inside ```viewModel: MenuViewModel```. It is an ar
 Coming soon
 
 ## Nested Table View Demo Controller
-This controller demostrate how to construct TableView with nested CollectionView. Data is from rss itune and this the base url https://rss.itunes.apple.com/api/v1/.
+This controller can show top movies, podcasts, and audiobooks from Itune. Users can customize output by tapping the filter button on ```NestedTableViewCell```.
 
 ### Screenshot
 ![](https://i.imgur.com/5tf5fwIl.png)
@@ -54,8 +54,23 @@ This controller demostrate how to construct TableView with nested CollectionView
 ### UI Wireframe
 ![](https://i.imgur.com/JmZiFE2l.png)
 
-### Network
-This controller uses base URL from https://rss.itunes.apple.com/api/v1/. Then use ```ItuneURLWrapper``` to construct the remaining URI string.
+### Network Request
+Data is from RSS Itune and this the base url https://rss.itunes.apple.com/api/v1/. ```NestedTableCellViewModel: NSObject``` will call ```loadMedia(urlString: String, completion: @escaping (Result<[MediaObject], MediaLoadingError>) -> Void)``` to get a list of media. ```CollectionMediaCellViewModel``` will call ```getImagefromURL(completion: @escaping (Result<UIImage, MediaLoadingError>) -> Void)``` in order to get cached image or make a network request to get it from server.
+
+#### Example code for network call to get a list of top movies from Itune.
+```
+        let mediaComponent = ItuneURLMovieComponent(feedTypeOption: .topMovies, genre: .all)
+        guard let urlString = URLStringCreator.createItuneURLString(ituneMediaComponent: mediaComponent, country:     .unitedStates, resultLimit: 10, allowExplicit: true) else {return}
+        let networkService = NetworkService()
+        networkService.loadMedia(urlString: urlString) { (result) in
+            switch result {
+            case .failure(let error):
+                print("error occured: \(error.localizedDescription)")
+            case .success(let mediaObjects):
+                print("an array of mediaObjects we got from server: \(mediaObjects)")
+            }
+        }
+```
 
 ## Animation Demo Controller
 Coming soon
