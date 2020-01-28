@@ -12,11 +12,12 @@ class MediaTypeSettingTableViewCell: UITableViewCell {
     
     var viewModel: MediaTypeSettingCellViewModel? {
         didSet {
-            titleLabel.text = viewModel?.mediaSetting.rawValue
+            guard let viewModel = viewModel else {return}
+            titleLabel.attributedText = AStringCreator.helveticaAString(style: .helveticaNeue, text: viewModel.mediaSetting.rawValue, size: 20, foregroundColor: .orange, backgroundColor: .clear)
             pickerView.delegate = viewModel
             pickerView.dataSource = viewModel
             pickerView.reloadAllComponents()
-            pickerView.selectRow(viewModel?.currentIndex ?? 0, inComponent: 0, animated: true)
+            pickerView.selectRow(viewModel.currentIndex, inComponent: 0, animated: true)
         }
     }
     

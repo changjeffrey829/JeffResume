@@ -53,8 +53,8 @@ class MediaTypeSettingViewModel: NSObject {
         }
     }
     
-    private func matchDisplayableMovieGenre(_ urlComponentString: String) -> ItuneURLMoviesGenre {
-        switch urlComponentString {
+    private func matchDisplayableMovieGenre(_ displayableString: String) -> ItuneURLMoviesGenre {
+        switch displayableString {
         case DisplayableMovieGenreString.all.rawValue:
             return ItuneURLMoviesGenre.all
         case DisplayableMovieGenreString.actionAndAdventure.rawValue:
@@ -66,8 +66,8 @@ class MediaTypeSettingViewModel: NSObject {
         }
     }
     
-    private func matchDisplayablePodcastGenre(_ urlComponentString: String) -> ItuneURLPodcastsGenre {
-        switch urlComponentString {
+    private func matchDisplayablePodcastGenre(_ displayableString: String) -> ItuneURLPodcastsGenre {
+        switch displayableString {
         case DisplayablePodcastGenreString.all.rawValue:
             return ItuneURLPodcastsGenre.all
         default:
@@ -75,8 +75,8 @@ class MediaTypeSettingViewModel: NSObject {
         }
     }
     
-    private func matchDisplayableAudiobookGenre(_ urlComponentString: String) -> ItuneURLAudiobooksGenre {
-        switch urlComponentString {
+    private func matchDisplayableAudiobookGenre(_ displayableString: String) -> ItuneURLAudiobooksGenre {
+        switch displayableString {
         case DisplayableAudiobookGenreString.all.rawValue:
             return ItuneURLAudiobooksGenre.all
         default:
@@ -95,8 +95,8 @@ class MediaTypeSettingViewModel: NSObject {
         }
     }
     
-    private func matchDisplayableCountryStringToURLComponent(_ urlComponentString: String) -> ItuneURLCountry {
-        switch urlComponentString {
+    private func matchDisplayableCountryStringToURLComponent(_ displayableString: String) -> ItuneURLCountry {
+        switch displayableString {
         case DisplayableCountryString.unitedStates.rawValue:
             return ItuneURLCountry.unitedStates
         case DisplayableCountryString.unitedKingdom.rawValue:
@@ -134,38 +134,6 @@ class MediaTypeSettingViewModel: NSObject {
             return ItuneURLAudiobooksFeedType.topAudiobooks
         }
     }
-}
-
-enum DisplayableCountryString: String {
-    case unitedStates = "United States"
-    case unitedKingdom = "United Kingdom"
-    case japan = "Japan"
-}
-
-enum DisplayableMovieFeedTypeString: String {
-    case topMovies = "Top Movies"
-}
-
-enum DisplayablePodcastFeedTypeString: String {
-    case topPodcasts = "Top Podcasts"
-}
-
-enum DisplayableAudiobookFeedTypeString: String {
-    case topAudiobooks = "Top Audiobooks"
-}
-
-enum DisplayableMovieGenreString: String {
-    case all = "All"
-    case actionAndAdventure = "Action and Adventure"
-    case documentary = "Documentary"
-}
-
-enum DisplayablePodcastGenreString: String {
-    case all = "All"
-}
-
-enum DisplayableAudiobookGenreString: String {
-    case all = "All"
 }
 
 extension MediaTypeSettingViewModel: UITableViewDataSource, UITableViewDelegate {
@@ -211,12 +179,12 @@ extension MediaTypeSettingViewModel: UITableViewDataSource, UITableViewDelegate 
         switch mediaSetting {
         case .country:
             for country in ItuneURLCountry.allValues {
-                result.append(getCountryString(country: country))
+                result.append(ItuneDisplayableStringConverter.getCountryString(country: country))
             }
         case .feedType:
-            result = getFeedTypeStrings(mediaType: mediaType)
+            result = ItuneDisplayableStringConverter.getFeedTypeStrings(mediaType: mediaType)
         case .genre:
-            result = getGenreString(mediaType: mediaType)
+            result = ItuneDisplayableStringConverter.getGenreString(mediaType: mediaType)
         case .resultLimit:
             for int in 1...100 {
                 result.append(String(int))
@@ -226,100 +194,5 @@ extension MediaTypeSettingViewModel: UITableViewDataSource, UITableViewDelegate 
             result.append("No Explicit")
         }
         return result
-    }
-    
-    private func getCountryString(country: ItuneURLCountry) -> String {
-        switch country {
-        case .japan:
-         return "Japan"
-        case .unitedKingdom:
-            return "United Kingdom"
-        case .unitedStates:
-            return "United States"
-        }
-    }
-    
-    private func getFeedTypeStrings(mediaType: MediaType) -> [String] {
-        var result = [String]()
-        switch mediaType {
-        case .movies:
-            for feedType in ItuneURLMoviesFeedType.allValues {
-                result.append(getMovieFeedTypeString(feedType: feedType))
-            }
-        case .podcasts:
-            for feedType in ItuneURLPodcastsFeedType.allValues {
-                result.append(getPodcastFeedTypeString(feedType: feedType))
-            }
-        case .audiobooks:
-            for feedType in ItuneURLAudiobooksFeedType.allValues {
-                result.append(getAudiobookFeedTypeString(feedType: feedType))
-            }
-        }
-        return result
-    }
-    
-    private func getMovieFeedTypeString(feedType: ItuneURLMoviesFeedType) -> String {
-        switch feedType {
-        case .topMovies:
-            return DisplayableMovieFeedTypeString.topMovies.rawValue
-        }
-    }
-    
-    private func getPodcastFeedTypeString(feedType: ItuneURLPodcastsFeedType) -> String {
-        switch feedType {
-        case .topPodcasts:
-            return DisplayablePodcastFeedTypeString.topPodcasts.rawValue
-        }
-    }
-    
-    private func getAudiobookFeedTypeString(feedType: ItuneURLAudiobooksFeedType) -> String {
-        switch feedType {
-        case .topAudiobooks:
-            return DisplayableAudiobookFeedTypeString.topAudiobooks.rawValue
-        }
-    }
-    
-    private func getGenreString(mediaType: MediaType) -> [String] {
-        var result = [String]()
-        switch mediaType {
-        case .movies:
-            for genre in ItuneURLMoviesGenre.allValues {
-                result.append(getMovieGenreString(genre: genre))
-            }
-        case .podcasts:
-            for genre in ItuneURLPodcastsGenre.allValues {
-                result.append(getPodcastGenreString(genre: genre))
-            }
-        case .audiobooks:
-            for genre in ItuneURLAudiobooksGenre.allValues {
-                result.append(getAudiobookGenreString(genre: genre))
-            }
-        }
-        return result
-    }
-    
-    private func getMovieGenreString(genre: ItuneURLMoviesGenre) -> String {
-        switch genre {
-        case .actionAndAdventure:
-            return "Action and Adventure"
-        case .all:
-            return "All"
-        case .documentary:
-            return "Documentary"
-        }
-    }
-    
-    private func getPodcastGenreString(genre: ItuneURLPodcastsGenre) -> String {
-        switch genre {
-        case .all:
-            return "All"
-        }
-    }
-    
-    private func getAudiobookGenreString(genre: ItuneURLAudiobooksGenre) -> String {
-        switch genre {
-        case .all:
-            return "All"
-        }
     }
 }
