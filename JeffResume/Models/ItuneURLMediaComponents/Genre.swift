@@ -12,19 +12,19 @@ protocol ItuneURLGenre {
     
 }
 
-enum ItuneURLMoviesGenre: String, CaseIterable, ItuneURLGenre {
+enum ItuneURLMoviesGenre: CaseIterable, ItuneURLGenre {
     case all
     case documentary
-    case actionAndAdventure = "action-and-adventure"
+    case actionAndAdventure
     static let allValues = [all, documentary, actionAndAdventure]
 }
 
-enum ItuneURLPodcastsGenre: String, CaseIterable, ItuneURLGenre {
+enum ItuneURLPodcastsGenre: CaseIterable, ItuneURLGenre {
     case all
     static let allValues = [all]
 }
 
-enum ItuneURLAudiobooksGenre: String, CaseIterable, ItuneURLGenre {
+enum ItuneURLAudiobooksGenre: CaseIterable, ItuneURLGenre {
     case all
     static let allValues = [all]
 }
