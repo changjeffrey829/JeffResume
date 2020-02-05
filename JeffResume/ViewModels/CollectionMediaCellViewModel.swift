@@ -16,7 +16,6 @@ class CollectionMediaCellViewModel {
     // MARK: - PROPERTIES
     static let nameHeight: CGFloat = 20
     static let padding: CGFloat = 4
-    private var lastUrlUsedToLoadImage: String?
     private var networkService: MediaProtocol
     private var mediaObject: MediaObject
     private var mediaLoadingError: MediaLoadingError?
@@ -49,7 +48,6 @@ class CollectionMediaCellViewModel {
     
     func getImagefromURL(completion: @escaping (Result<UIImage, MediaLoadingError>) -> Void) {
         let urlString = mediaObject.artworkUrl100
-        lastUrlUsedToLoadImage = urlString
         if let cachedimage = imageCache[urlString] {
             completion(.success(cachedimage))
             return

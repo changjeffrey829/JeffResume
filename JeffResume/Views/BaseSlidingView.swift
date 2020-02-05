@@ -15,7 +15,6 @@ class DarkCoverView: UIView {}
 class BaseSlidingView: UIView {
     var centerViewLeadingConstraint: NSLayoutConstraint!
     var centerViewTrailingConstraint: NSLayoutConstraint!
-//    private let menuWidth: CGFloat = 250
     
     init(frame: CGRect, menuWidth: CGFloat, centerCoverView: UIView, sideCoverView: UIView) {
         self.centerCoverView = centerCoverView

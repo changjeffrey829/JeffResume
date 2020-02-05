@@ -25,7 +25,7 @@ class ComingSoonView: UIView {
     }
     
     // MARK: - UI ELEMENTS
-    lazy var menuButton: UIButton = {
+    let menuButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "FuzzyProfileImage"), for: .normal)
         button.imageView?.contentMode = UIView.ContentMode.scaleAspectFill

@@ -11,8 +11,8 @@ import Foundation
 struct Job {
     let companyName: String
     let jobTitle: String
-    let startDate: Date
-    let endDate: Date?
+    let startDate: String
+    let endDate: String
     let description: String
     let technology: String
     let appStoreLink: String?

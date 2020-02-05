@@ -35,7 +35,7 @@ class MediaSettingController: UIViewController {
         super.viewDidLoad()
         self.view = mainView
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveFilterSetting))
-        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.tintColor = .white
         NotificationCenter.default.addObserver(self, selector: #selector(updateURLComponent(_:)), name: .ituneURLComponentUpdated, object: nil)
         mainView.mediaTypeSettingTableView.register(MediaTypeSettingTableViewCell.self, forCellReuseIdentifier: MediaTypeSettingViewModel.cellID)
     }

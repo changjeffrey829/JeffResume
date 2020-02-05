@@ -19,7 +19,7 @@ struct AStringCreator {
     
     private init() {}
     
-    static func helveticaAString(style: HelveticaStyle, text: String, size: CGFloat, foregroundColor: UIColor, backgroundColor: UIColor) -> NSAttributedString {
+    static func helveticaAString(style: HelveticaStyle, text: String, size: CGFloat, foregroundColor: UIColor, backgroundColor: UIColor) -> NSMutableAttributedString {
         let fontNameString: String
         switch style {
         case .helveticaNeue:
@@ -38,7 +38,8 @@ struct AStringCreator {
         } else {
             attribute = [NSAttributedString.Key.foregroundColor: foregroundColor, NSAttributedString.Key.backgroundColor: backgroundColor]
         }
-        return NSAttributedString(string: text, attributes: attribute)
+//        return NSAttributedString(string: text, attributes: attribute)
+        return NSMutableAttributedString(string: text, attributes: attribute)
     }
     
     static func helveticaAString(style: HelveticaStyle, text: String, size: CGFloat, foregroundColor: UIColor, backgroundColor: UIColor, alignment: NSTextAlignment) -> NSAttributedString {

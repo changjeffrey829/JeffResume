@@ -71,7 +71,8 @@ class BaseSlidingController: UIViewController {
     
     // MARK: - PRIVATE STATIC METHOD
     static private func showDefaultViewController() -> UIViewController {
-        let viewController = ComingSoonController()
+        let selfBioViewModel = SelfBioViewModel()
+        let viewController = SelfBioController(viewModel: selfBioViewModel)
         return UINavigationController(rootViewController: viewController)
     }
     
@@ -129,7 +130,8 @@ extension BaseSlidingController: BaseSlidingControllerDelegate {
         switch index {
         case 0:
             performCenterViewCleanUp()
-            let viewController = ComingSoonController()
+            let selfBioViewModel = SelfBioViewModel()
+            let viewController = SelfBioController(viewModel: selfBioViewModel)
             centerViewController = UINavigationController(rootViewController: viewController)
         case 1:
             performCenterViewCleanUp()

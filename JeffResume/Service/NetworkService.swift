@@ -49,7 +49,8 @@ struct NetworkService: MediaProtocol {
                 let photoImage = UIImage(data: imageData)
                 else {
                     completion(.failure(MediaLoadingError.imageError))
-                    return }
+                    return
+            }
             completion(.success(photoImage))
         }
     }
@@ -64,7 +65,7 @@ struct NetworkService: MediaProtocol {
             guard
                 let httpResponse = response as? HTTPURLResponse,
                 (200...299).contains(httpResponse.statusCode) else {
-                    completion(.failure(MediaLoadingError.imageError))
+                    completion(.failure(MediaLoadingError.mediaError))
                     return
             }
             
