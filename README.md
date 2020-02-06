@@ -43,10 +43,17 @@ This controller is responsible for display menu and tell ```BaseSlidingControlle
 You can update the datasource inside ```viewModel: MenuViewModel```. It is an array of String as ```menuItems: [String]```. Keep in mind row count must match the index of ```didSelectMenuItem(index: Int)``` in ```BaseSlidingController```. 
 
 ## Self Bio Controller
-Coming soon
+This controller shows my bio and work experience with segment control.
+
+### Screenshots
+![](https://i.imgur.com/0j3ylJil.png)
+![](https://i.imgur.com/ROx6ITdl.png)
+
+### Datasource
+Right now all data are hard coded until I implement Firebase later on.
 
 ## Nested Table View Demo Controller
-This controller can show top movies, podcasts, and audiobooks from Itune. Users can customize output by tapping the filter button on ```NestedTableViewCell```.
+This controller shows top movies, podcasts, and audiobooks from Itune. Users can customize output by tapping the filter button on ```NestedTableViewCell```.
 
 ### Screenshot
 ![](https://i.imgur.com/5tf5fwIl.png)
