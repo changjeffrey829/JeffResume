@@ -14,13 +14,6 @@ struct Job {
     let startDate: String
     let endDate: String
     let description: String
-    let technology: String
+    let technology: String?
     let appStoreLink: String?
-}
-
-struct Education {
-    let schoolName: String
-    let startYear: String
-    let endYear: String
-    let major: String
 }

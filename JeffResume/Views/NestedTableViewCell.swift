@@ -9,7 +9,6 @@
 import UIKit
 
 class NestedTableViewCell: UITableViewCell {
-    
     // MARK: - PROPERTIES
     var viewModel: NestedTableCellViewModel? {
         didSet {

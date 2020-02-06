@@ -9,9 +9,10 @@
 import UIKit
 
 class CustomMenuHeaderView: UIView {
-    
+    // MARK: PROPERTY
     let profileImageView = ProfileImageView()
     
+    // MARK: LIFE CYCLE
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .black
@@ -28,5 +29,4 @@ class CustomMenuHeaderView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

@@ -35,6 +35,11 @@
 		040BE94723E948E4005E53ED /* SelfBioResumeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE94623E948E4005E53ED /* SelfBioResumeCell.swift */; };
 		040BE94923EAA2ED005E53ED /* SelfBioCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE94823EAA2ED005E53ED /* SelfBioCellViewModel.swift */; };
 		040BE94B23EAA313005E53ED /* SelfBioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE94A23EAA313005E53ED /* SelfBioViewModel.swift */; };
+		040BE94D23EAAD51005E53ED /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE94C23EAAD51005E53ED /* Education.swift */; };
+		040BE94F23EB8F95005E53ED /* SelfBioHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE94E23EB8F95005E53ED /* SelfBioHeaderView.swift */; };
+		040BE95123EB9061005E53ED /* SelfBioEduCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE95023EB9061005E53ED /* SelfBioEduCell.swift */; };
+		040BE95323EB909D005E53ED /* SelfBioEduCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE95223EB909D005E53ED /* SelfBioEduCellViewModel.swift */; };
+		040BE95723EB92AC005E53ED /* SelfBioEducationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE95623EB92AC005E53ED /* SelfBioEducationCell.swift */; };
 		0440247A23CE70B6003865B5 /* NestedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440247923CE70B6003865B5 /* NestedViewModel.swift */; };
 		0440247C23CE70D7003865B5 /* NestedTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440247B23CE70D7003865B5 /* NestedTableCellViewModel.swift */; };
 		0440248023CE7144003865B5 /* NestedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440247F23CE7144003865B5 /* NestedTableViewCell.swift */; };
@@ -117,6 +122,11 @@
 		040BE94623E948E4005E53ED /* SelfBioResumeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioResumeCell.swift; sourceTree = "<group>"; };
 		040BE94823EAA2ED005E53ED /* SelfBioCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioCellViewModel.swift; sourceTree = "<group>"; };
 		040BE94A23EAA313005E53ED /* SelfBioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioViewModel.swift; sourceTree = "<group>"; };
+		040BE94C23EAAD51005E53ED /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
+		040BE94E23EB8F95005E53ED /* SelfBioHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioHeaderView.swift; sourceTree = "<group>"; };
+		040BE95023EB9061005E53ED /* SelfBioEduCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioEduCell.swift; sourceTree = "<group>"; };
+		040BE95223EB909D005E53ED /* SelfBioEduCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioEduCellViewModel.swift; sourceTree = "<group>"; };
+		040BE95623EB92AC005E53ED /* SelfBioEducationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioEducationCell.swift; sourceTree = "<group>"; };
 		0440247923CE70B6003865B5 /* NestedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedViewModel.swift; sourceTree = "<group>"; };
 		0440247B23CE70D7003865B5 /* NestedTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedTableCellViewModel.swift; sourceTree = "<group>"; };
 		0440247F23CE7144003865B5 /* NestedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedTableViewCell.swift; sourceTree = "<group>"; };
@@ -228,8 +238,11 @@
 				0440247F23CE7144003865B5 /* NestedTableViewCell.swift */,
 				0440249B23D6C65A003865B5 /* NestedViewTabView.swift */,
 				0409146023C92A8F0089EE66 /* ProfileImageView.swift */,
+				040BE95023EB9061005E53ED /* SelfBioEduCell.swift */,
+				040BE94E23EB8F95005E53ED /* SelfBioHeaderView.swift */,
 				040BE94623E948E4005E53ED /* SelfBioResumeCell.swift */,
 				040BE94223E8E1CA005E53ED /* SelfBioView.swift */,
+				040BE95623EB92AC005E53ED /* SelfBioEducationCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -245,6 +258,7 @@
 				0440247B23CE70D7003865B5 /* NestedTableCellViewModel.swift */,
 				0440247923CE70B6003865B5 /* NestedViewModel.swift */,
 				040BE94823EAA2ED005E53ED /* SelfBioCellViewModel.swift */,
+				040BE95223EB909D005E53ED /* SelfBioEduCellViewModel.swift */,
 				040BE94A23EAA313005E53ED /* SelfBioViewModel.swift */,
 			);
 			path = ViewModels;
@@ -357,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				046A079023E8D36A0071545A /* Job.swift */,
+				040BE94C23EAAD51005E53ED /* Education.swift */,
 			);
 			path = SelfBio;
 			sourceTree = "<group>";
@@ -553,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				044024A223D6CD5E003865B5 /* MediaSetting.swift in Sources */,
+				040BE95123EB9061005E53ED /* SelfBioEduCell.swift in Sources */,
 				0440249223D12643003865B5 /* FeedType.swift in Sources */,
 				0409145F23C92A6C0089EE66 /* AStringCreator.swift in Sources */,
 				0409148523CA6D390089EE66 /* MediaObject.swift in Sources */,
@@ -560,6 +576,7 @@
 				0440248C23CFB227003865B5 /* NotificationNameExt.swift in Sources */,
 				0409145923C929850089EE66 /* MenuController.swift in Sources */,
 				0440249823D18F06003865B5 /* MediaTypeSettingViewModel.swift in Sources */,
+				040BE94D23EAAD51005E53ED /* Education.swift in Sources */,
 				045CD0F423DB85B600930003 /* BaseSlidingView.swift in Sources */,
 				045CD10723DFB39B00930003 /* DisplayableStringConverter.swift in Sources */,
 				0440248223CE88F5003865B5 /* Bindable.swift in Sources */,
@@ -583,6 +600,7 @@
 				0409148323CA6CE60089EE66 /* MediaType.swift in Sources */,
 				0409147E23CA6CA20089EE66 /* MockSession.swift in Sources */,
 				040BE94B23EAA313005E53ED /* SelfBioViewModel.swift in Sources */,
+				040BE94F23EB8F95005E53ED /* SelfBioHeaderView.swift in Sources */,
 				0440248823CEB036003865B5 /* CollectionMediaCell.swift in Sources */,
 				0440249C23D6C65A003865B5 /* NestedViewTabView.swift in Sources */,
 				045CD10523DFB04100930003 /* DisplayableString.swift in Sources */,
@@ -595,12 +613,14 @@
 				0440249423D18237003865B5 /* MediaTypeSettingCellViewModel.swift in Sources */,
 				0409146C23CA38460089EE66 /* URLSessionExt.swift in Sources */,
 				045CD0FA23DD204D00930003 /* AnimationDemoController.swift in Sources */,
+				040BE95323EB909D005E53ED /* SelfBioEduCellViewModel.swift in Sources */,
 				045CD10323DFA82A00930003 /* ItuneURLMediaComponent.swift in Sources */,
 				0409144323C920440089EE66 /* AppDelegate.swift in Sources */,
 				0440248623CEA264003865B5 /* CollectionMediaCellViewModel.swift in Sources */,
 				0409146323C92AA10089EE66 /* AnchorExtension.swift in Sources */,
 				0440249E23D6C849003865B5 /* ComingSoonView.swift in Sources */,
 				040BE94723E948E4005E53ED /* SelfBioResumeCell.swift in Sources */,
+				040BE95723EB92AC005E53ED /* SelfBioEducationCell.swift in Sources */,
 				0409148023CA6CB20089EE66 /* NetworkService.swift in Sources */,
 				0409144523C920440089EE66 /* SceneDelegate.swift in Sources */,
 				044024A023D6CC04003865B5 /* MediaSettingView.swift in Sources */,

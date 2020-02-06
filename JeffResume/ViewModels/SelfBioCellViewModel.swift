@@ -39,9 +39,10 @@ struct SelfBioCellViewModel {
         return descriptLabelAString
     }
     
-    func technologyAString() -> NSAttributedString {
+    func technologyAString() -> NSAttributedString? {
+        guard let techString = job.technology else {return nil}
         let techLabelAString = AStringCreator.helveticaAString(style: .helveticaNeueItalic, text: "Technology: ", size: 16, foregroundColor: .orange, backgroundColor: .clear)
-        let techAString = AStringCreator.helveticaAString(style: .helveticaNeue, text: job.technology, size: 16, foregroundColor: .white, backgroundColor: .clear)
+        let techAString = AStringCreator.helveticaAString(style: .helveticaNeue, text: techString, size: 16, foregroundColor: .white, backgroundColor: .clear)
         techLabelAString.append(techAString)
         return techLabelAString
     }

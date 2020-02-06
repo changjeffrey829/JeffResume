@@ -15,7 +15,6 @@ class IconImageView: UIImageView {
 }
 
 class MenuItemCell: UITableViewCell {
-    
     // MARK: - LIFE CYCLE
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

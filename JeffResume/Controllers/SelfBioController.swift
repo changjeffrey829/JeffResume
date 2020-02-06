@@ -37,7 +37,8 @@ class SelfBioController: UIViewController {
     private func setupTableView() {
         selfBioView.tableView.delegate = viewModel
         selfBioView.tableView.dataSource = viewModel
-        selfBioView.tableView.register(SelfBioResumeCell.self, forCellReuseIdentifier: SelfBioViewModel.cellID)
+        selfBioView.tableView.register(SelfBioResumeCell.self, forCellReuseIdentifier: SelfBioViewModel.resumeCellID)
+        selfBioView.tableView.register(SelfBioEduCell.self, forCellReuseIdentifier: SelfBioViewModel.eduCellID)
     }
     
     private func genericTransition(from fromView: UIView, to toView: UIView) {

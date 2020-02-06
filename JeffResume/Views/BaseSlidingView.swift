@@ -13,9 +13,11 @@ class MenuContainerView: UIView {}
 class DarkCoverView: UIView {}
 
 class BaseSlidingView: UIView {
+    // MARK: - PROPERTIES
     var centerViewLeadingConstraint: NSLayoutConstraint!
     var centerViewTrailingConstraint: NSLayoutConstraint!
     
+    // MARK: - LIFE CYCLE
     init(frame: CGRect, menuWidth: CGFloat, centerCoverView: UIView, sideCoverView: UIView) {
         self.centerCoverView = centerCoverView
         self.sideCoverView = sideCoverView
@@ -67,6 +69,7 @@ class BaseSlidingView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - UI ELEMENTS
     let centerCoverView: UIView
     
     let sideCoverView: UIView

@@ -9,26 +9,58 @@
 import UIKit
 
 class SelfBioViewModel: NSObject, UITableViewDelegate, UITableViewDataSource {
-    
-    static let cellID = "selfBioCellID"
-    
+    // MARK: - PROPERTIES
+    static let resumeCellID = "selfBioResumeCellID"
+    static let eduCellID = "selfBioEduCellID"
     private let jobs: [Job]
+    private let educations: [Education]
+    private let headerHeight: CGFloat = 50
     
+    // MARK: - LIFE CYCLE
     override init() {
         jobs = ResumeCreator.jobHistory()
+        educations = ResumeCreator.education()
         super.init()
     }
     
+    // MARK: - PUBLIC METHOD
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return jobs.count
+        if section == 0 {
+            return jobs.count
+        } else {
+            return educations.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = SelfBioHeaderView()
+        let category = section == 0 ? "Experience" : "Education"
+        view.categoryLabel.attributedText = AStringCreator.helveticaAString(style: .helveticaNeueBold, text: category, size: 20, foregroundColor: .orange, backgroundColor: .clear)
+        return view
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SelfBioViewModel.cellID, for: indexPath) as? SelfBioResumeCell
-        let job = jobs[indexPath.row]
-        let cellViewModel = SelfBioCellViewModel(job: job)
-        cell?.viewModel = cellViewModel
-        return cell ?? UITableViewCell()
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: SelfBioViewModel.resumeCellID, for: indexPath) as? SelfBioResumeCell
+            let job = jobs[indexPath.row]
+            let cellViewModel = SelfBioCellViewModel(job: job)
+            cell?.viewModel = cellViewModel
+            return cell ?? UITableViewCell()
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: SelfBioViewModel.eduCellID, for: indexPath) as? SelfBioEduCell
+            let education = educations[indexPath.item]
+            let cellViewModel = SelfBioEduCellViewModel(education: education)
+            cell?.viewModel = cellViewModel
+            return cell ?? UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return headerHeight
     }
     
     func selfBioAString() -> NSAttributedString {

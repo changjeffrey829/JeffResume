@@ -9,7 +9,7 @@
 import UIKit
 
 class MediaTypeSettingTableViewCell: UITableViewCell {
-    
+    // MARK: - PROPERTY
     var viewModel: MediaTypeSettingCellViewModel? {
         didSet {
             guard let viewModel = viewModel else {return}
@@ -21,6 +21,7 @@ class MediaTypeSettingTableViewCell: UITableViewCell {
         }
     }
     
+    // MARK: - LIFE CYCLE
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(titleLabel)
@@ -38,6 +39,7 @@ class MediaTypeSettingTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - UI ELEMENT
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "title"

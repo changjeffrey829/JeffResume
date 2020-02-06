@@ -8,6 +8,7 @@
 
 import Foundation
 
+// TEMP SOLUTION UNTIL IMPLEMENT FIREBASE
 struct ResumeCreator {
     
     static func bio() -> String {
@@ -87,8 +88,14 @@ Hi potential employer
 - Security Team supervisor for Entry Control Point in Kuwait
 - Directly in charge of 6 subordinates training and mission readiness
 """,
-            technology: "",
+            technology: nil,
             appStoreLink: nil)
         return [mei, coloTek, aride, myBrowniePoints, navy]
+    }
+    
+    static func education() -> [Education] {
+        let lincolnTech = Education(schoolName: "Lincoln Tech", startYear: "2008", endYear: "2009", major: "Automotive")
+        let queensCommunityCollege = Education(schoolName: "Queens Community College", startYear: "2005", endYear: "2006", major: "Liberal Art")
+        return [lincolnTech, queensCommunityCollege]
     }
 }
