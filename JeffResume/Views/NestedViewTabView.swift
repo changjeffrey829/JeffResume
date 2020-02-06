@@ -9,7 +9,6 @@
 import UIKit
 
 class NestedViewTabView: UIView {
-    
     // MARK: - LIFE CYCLE
     override init(frame: CGRect) {
         super.init(frame: frame)

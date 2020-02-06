@@ -9,6 +9,7 @@
 import UIKit
 
 class MediaSettingView: UIView {
+    // MARK: - LIFE CYCLE
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(mediaTypeSettingTableView)
@@ -19,6 +20,7 @@ class MediaSettingView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - UI ELEMENT
     lazy var mediaTypeSettingTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.backgroundColor = .black

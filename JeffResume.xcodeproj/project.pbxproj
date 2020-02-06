@@ -30,6 +30,16 @@
 		040914AD23CC4DB90089EE66 /* URLStringCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040914AC23CC4DB90089EE66 /* URLStringCreator.swift */; };
 		040914AF23CC56A10089EE66 /* MockPodcastsJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 040914AE23CC56A10089EE66 /* MockPodcastsJSON.txt */; };
 		040914B223CC59A30089EE66 /* MockAudiobooksJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 040914B123CC59A30089EE66 /* MockAudiobooksJSON.txt */; };
+		040BE94323E8E1CA005E53ED /* SelfBioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE94223E8E1CA005E53ED /* SelfBioView.swift */; };
+		040BE94523E8ED43005E53ED /* ResumeCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE94423E8ED43005E53ED /* ResumeCreator.swift */; };
+		040BE94723E948E4005E53ED /* SelfBioResumeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE94623E948E4005E53ED /* SelfBioResumeCell.swift */; };
+		040BE94923EAA2ED005E53ED /* SelfBioCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE94823EAA2ED005E53ED /* SelfBioCellViewModel.swift */; };
+		040BE94B23EAA313005E53ED /* SelfBioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE94A23EAA313005E53ED /* SelfBioViewModel.swift */; };
+		040BE94D23EAAD51005E53ED /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE94C23EAAD51005E53ED /* Education.swift */; };
+		040BE94F23EB8F95005E53ED /* SelfBioHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE94E23EB8F95005E53ED /* SelfBioHeaderView.swift */; };
+		040BE95123EB9061005E53ED /* SelfBioEduCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE95023EB9061005E53ED /* SelfBioEduCell.swift */; };
+		040BE95323EB909D005E53ED /* SelfBioEduCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE95223EB909D005E53ED /* SelfBioEduCellViewModel.swift */; };
+		040BE95723EB92AC005E53ED /* SelfBioEducationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BE95623EB92AC005E53ED /* SelfBioEducationCell.swift */; };
 		0440247A23CE70B6003865B5 /* NestedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440247923CE70B6003865B5 /* NestedViewModel.swift */; };
 		0440247C23CE70D7003865B5 /* NestedTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440247B23CE70D7003865B5 /* NestedTableCellViewModel.swift */; };
 		0440248023CE7144003865B5 /* NestedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440247F23CE7144003865B5 /* NestedTableViewCell.swift */; };
@@ -62,6 +72,7 @@
 		045CD10B23DFB4A100930003 /* DisplayableStringConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CD10A23DFB4A100930003 /* DisplayableStringConverterTests.swift */; };
 		045CD10E23DFCC8500930003 /* ItuneURLCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CD10D23DFCC8500930003 /* ItuneURLCountry.swift */; };
 		045CD11023DFCCAB00930003 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CD10F23DFCCAB00930003 /* BaseURL.swift */; };
+		046A079123E8D36A0071545A /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A079023E8D36A0071545A /* Job.swift */; };
 		0CEAB6DDB320B649E746DD28 /* Pods_JeffResume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EE514476A1B83C56E9D0F8 /* Pods_JeffResume.framework */; };
 		EE810F0424DCC2A9B42F3B2A /* Pods_JeffResumeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D32717CF4610150E2BB8794 /* Pods_JeffResumeTests.framework */; };
 /* End PBXBuildFile section */
@@ -106,6 +117,16 @@
 		040914AC23CC4DB90089EE66 /* URLStringCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLStringCreator.swift; sourceTree = "<group>"; };
 		040914AE23CC56A10089EE66 /* MockPodcastsJSON.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MockPodcastsJSON.txt; sourceTree = "<group>"; };
 		040914B123CC59A30089EE66 /* MockAudiobooksJSON.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MockAudiobooksJSON.txt; sourceTree = "<group>"; };
+		040BE94223E8E1CA005E53ED /* SelfBioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioView.swift; sourceTree = "<group>"; };
+		040BE94423E8ED43005E53ED /* ResumeCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeCreator.swift; sourceTree = "<group>"; };
+		040BE94623E948E4005E53ED /* SelfBioResumeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioResumeCell.swift; sourceTree = "<group>"; };
+		040BE94823EAA2ED005E53ED /* SelfBioCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioCellViewModel.swift; sourceTree = "<group>"; };
+		040BE94A23EAA313005E53ED /* SelfBioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioViewModel.swift; sourceTree = "<group>"; };
+		040BE94C23EAAD51005E53ED /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
+		040BE94E23EB8F95005E53ED /* SelfBioHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioHeaderView.swift; sourceTree = "<group>"; };
+		040BE95023EB9061005E53ED /* SelfBioEduCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioEduCell.swift; sourceTree = "<group>"; };
+		040BE95223EB909D005E53ED /* SelfBioEduCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioEduCellViewModel.swift; sourceTree = "<group>"; };
+		040BE95623EB92AC005E53ED /* SelfBioEducationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBioEducationCell.swift; sourceTree = "<group>"; };
 		0440247923CE70B6003865B5 /* NestedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedViewModel.swift; sourceTree = "<group>"; };
 		0440247B23CE70D7003865B5 /* NestedTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedTableCellViewModel.swift; sourceTree = "<group>"; };
 		0440247F23CE7144003865B5 /* NestedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedTableViewCell.swift; sourceTree = "<group>"; };
@@ -138,6 +159,7 @@
 		045CD10A23DFB4A100930003 /* DisplayableStringConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayableStringConverterTests.swift; sourceTree = "<group>"; };
 		045CD10D23DFCC8500930003 /* ItuneURLCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItuneURLCountry.swift; sourceTree = "<group>"; };
 		045CD10F23DFCCAB00930003 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		046A079023E8D36A0071545A /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		2FA6DDEEB8BA745686FD1B64 /* Pods-JeffResumeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JeffResumeTests.debug.xcconfig"; path = "Target Support Files/Pods-JeffResumeTests/Pods-JeffResumeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		78B0B075D86D5B5755945D1F /* Pods-JeffResume.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JeffResume.release.xcconfig"; path = "Target Support Files/Pods-JeffResume/Pods-JeffResume.release.xcconfig"; sourceTree = "<group>"; };
 		9D32717CF4610150E2BB8794 /* Pods_JeffResumeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JeffResumeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,9 +228,9 @@
 		0409146423C92AC20089EE66 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				045CD0F323DB85B600930003 /* BaseSlidingView.swift */,
 				0440248723CEB036003865B5 /* CollectionMediaCell.swift */,
 				0440249D23D6C849003865B5 /* ComingSoonView.swift */,
-				045CD0F323DB85B600930003 /* BaseSlidingView.swift */,
 				0409145A23C929A70089EE66 /* CustomMenuHeaderView.swift */,
 				0440249F23D6CC04003865B5 /* MediaSettingView.swift */,
 				0440249523D18ECF003865B5 /* MediaTypeSettingTableViewCell.swift */,
@@ -216,6 +238,11 @@
 				0440247F23CE7144003865B5 /* NestedTableViewCell.swift */,
 				0440249B23D6C65A003865B5 /* NestedViewTabView.swift */,
 				0409146023C92A8F0089EE66 /* ProfileImageView.swift */,
+				040BE95023EB9061005E53ED /* SelfBioEduCell.swift */,
+				040BE94E23EB8F95005E53ED /* SelfBioHeaderView.swift */,
+				040BE94623E948E4005E53ED /* SelfBioResumeCell.swift */,
+				040BE94223E8E1CA005E53ED /* SelfBioView.swift */,
+				040BE95623EB92AC005E53ED /* SelfBioEducationCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,13 +250,16 @@
 		0409146523C92ACC0089EE66 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				0440248523CEA264003865B5 /* CollectionMediaCellViewModel.swift */,
-				0440247923CE70B6003865B5 /* NestedViewModel.swift */,
 				045CD0F523DB85FC00930003 /* BaseSlidingViewModel.swift */,
-				0440247B23CE70D7003865B5 /* NestedTableCellViewModel.swift */,
-				0440248323CE9B75003865B5 /* MenuViewModel.swift */,
+				0440248523CEA264003865B5 /* CollectionMediaCellViewModel.swift */,
 				0440249323D18237003865B5 /* MediaTypeSettingCellViewModel.swift */,
 				0440249723D18F06003865B5 /* MediaTypeSettingViewModel.swift */,
+				0440248323CE9B75003865B5 /* MenuViewModel.swift */,
+				0440247B23CE70D7003865B5 /* NestedTableCellViewModel.swift */,
+				0440247923CE70B6003865B5 /* NestedViewModel.swift */,
+				040BE94823EAA2ED005E53ED /* SelfBioCellViewModel.swift */,
+				040BE95223EB909D005E53ED /* SelfBioEduCellViewModel.swift */,
+				040BE94A23EAA313005E53ED /* SelfBioViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -247,13 +277,13 @@
 		0409146723C92AEC0089EE66 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0409145623C924BE0089EE66 /* BaseSlidingController.swift */,
-				045CD0F723DD200000930003 /* SelfBioController.swift */,
 				045CD0F923DD204D00930003 /* AnimationDemoController.swift */,
-				0409145823C929850089EE66 /* MenuController.swift */,
-				0409144623C920440089EE66 /* NestedTableDemoController.swift */,
+				0409145623C924BE0089EE66 /* BaseSlidingController.swift */,
 				0440249923D57792003865B5 /* ComingSoonController.swift */,
 				0440248D23CFB982003865B5 /* MediaSettingController.swift */,
+				0409145823C929850089EE66 /* MenuController.swift */,
+				0409144623C920440089EE66 /* NestedTableDemoController.swift */,
+				045CD0F723DD200000930003 /* SelfBioController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +293,8 @@
 			children = (
 				0409145E23C92A6C0089EE66 /* AStringCreator.swift */,
 				045CD10623DFB39B00930003 /* DisplayableStringConverter.swift */,
+				0409147F23CA6CB20089EE66 /* NetworkService.swift */,
+				040BE94423E8ED43005E53ED /* ResumeCreator.swift */,
 				040914AC23CC4DB90089EE66 /* URLStringCreator.swift */,
 			);
 			path = Service;
@@ -284,6 +316,7 @@
 			children = (
 				0440248123CE88F5003865B5 /* Bindable.swift */,
 				0440248923CFB043003865B5 /* NotificationUserInfoType.swift */,
+				046A078F23E8D3250071545A /* SelfBio */,
 				045CD11323DFCCFE00930003 /* ItuneDisplayableComponents */,
 				045CD10C23DFCC0500930003 /* ItuneURLMediaComponents */,
 				045CD11423DFCD6A00930003 /* NetworkObjects */,
@@ -330,9 +363,17 @@
 			children = (
 				0409148623CA6D6F0089EE66 /* RawDataResponse.swift */,
 				0409148423CA6D390089EE66 /* MediaObject.swift */,
-				0409147F23CA6CB20089EE66 /* NetworkService.swift */,
 			);
 			path = NetworkObjects;
+			sourceTree = "<group>";
+		};
+		046A078F23E8D3250071545A /* SelfBio */ = {
+			isa = PBXGroup;
+			children = (
+				046A079023E8D36A0071545A /* Job.swift */,
+				040BE94C23EAAD51005E53ED /* Education.swift */,
+			);
+			path = SelfBio;
 			sourceTree = "<group>";
 		};
 		1EAB2CA41D3C8E318169E868 /* Frameworks */ = {
@@ -527,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				044024A223D6CD5E003865B5 /* MediaSetting.swift in Sources */,
+				040BE95123EB9061005E53ED /* SelfBioEduCell.swift in Sources */,
 				0440249223D12643003865B5 /* FeedType.swift in Sources */,
 				0409145F23C92A6C0089EE66 /* AStringCreator.swift in Sources */,
 				0409148523CA6D390089EE66 /* MediaObject.swift in Sources */,
@@ -534,6 +576,7 @@
 				0440248C23CFB227003865B5 /* NotificationNameExt.swift in Sources */,
 				0409145923C929850089EE66 /* MenuController.swift in Sources */,
 				0440249823D18F06003865B5 /* MediaTypeSettingViewModel.swift in Sources */,
+				040BE94D23EAAD51005E53ED /* Education.swift in Sources */,
 				045CD0F423DB85B600930003 /* BaseSlidingView.swift in Sources */,
 				045CD10723DFB39B00930003 /* DisplayableStringConverter.swift in Sources */,
 				0440248223CE88F5003865B5 /* Bindable.swift in Sources */,
@@ -545,14 +588,19 @@
 				045CD0F623DB85FC00930003 /* BaseSlidingViewModel.swift in Sources */,
 				044024A423D6CFE1003865B5 /* ItuneURLWrapper.swift in Sources */,
 				0409145B23C929A70089EE66 /* CustomMenuHeaderView.swift in Sources */,
+				040BE94523E8ED43005E53ED /* ResumeCreator.swift in Sources */,
 				0409145723C924BE0089EE66 /* BaseSlidingController.swift in Sources */,
 				0440249A23D57792003865B5 /* ComingSoonController.swift in Sources */,
+				046A079123E8D36A0071545A /* Job.swift in Sources */,
+				040BE94323E8E1CA005E53ED /* SelfBioView.swift in Sources */,
 				0409144723C920440089EE66 /* NestedTableDemoController.swift in Sources */,
 				0440247C23CE70D7003865B5 /* NestedTableCellViewModel.swift in Sources */,
 				0409145D23C929EA0089EE66 /* MenuItemCell.swift in Sources */,
 				0440248423CE9B75003865B5 /* MenuViewModel.swift in Sources */,
 				0409148323CA6CE60089EE66 /* MediaType.swift in Sources */,
 				0409147E23CA6CA20089EE66 /* MockSession.swift in Sources */,
+				040BE94B23EAA313005E53ED /* SelfBioViewModel.swift in Sources */,
+				040BE94F23EB8F95005E53ED /* SelfBioHeaderView.swift in Sources */,
 				0440248823CEB036003865B5 /* CollectionMediaCell.swift in Sources */,
 				0440249C23D6C65A003865B5 /* NestedViewTabView.swift in Sources */,
 				045CD10523DFB04100930003 /* DisplayableString.swift in Sources */,
@@ -560,15 +608,19 @@
 				045CD10E23DFCC8500930003 /* ItuneURLCountry.swift in Sources */,
 				0409146123C92A8F0089EE66 /* ProfileImageView.swift in Sources */,
 				0440247A23CE70B6003865B5 /* NestedViewModel.swift in Sources */,
+				040BE94923EAA2ED005E53ED /* SelfBioCellViewModel.swift in Sources */,
 				040914AD23CC4DB90089EE66 /* URLStringCreator.swift in Sources */,
 				0440249423D18237003865B5 /* MediaTypeSettingCellViewModel.swift in Sources */,
 				0409146C23CA38460089EE66 /* URLSessionExt.swift in Sources */,
 				045CD0FA23DD204D00930003 /* AnimationDemoController.swift in Sources */,
+				040BE95323EB909D005E53ED /* SelfBioEduCellViewModel.swift in Sources */,
 				045CD10323DFA82A00930003 /* ItuneURLMediaComponent.swift in Sources */,
 				0409144323C920440089EE66 /* AppDelegate.swift in Sources */,
 				0440248623CEA264003865B5 /* CollectionMediaCellViewModel.swift in Sources */,
 				0409146323C92AA10089EE66 /* AnchorExtension.swift in Sources */,
 				0440249E23D6C849003865B5 /* ComingSoonView.swift in Sources */,
+				040BE94723E948E4005E53ED /* SelfBioResumeCell.swift in Sources */,
+				040BE95723EB92AC005E53ED /* SelfBioEducationCell.swift in Sources */,
 				0409148023CA6CB20089EE66 /* NetworkService.swift in Sources */,
 				0409144523C920440089EE66 /* SceneDelegate.swift in Sources */,
 				044024A023D6CC04003865B5 /* MediaSettingView.swift in Sources */,
